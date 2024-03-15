@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, noarchive" />
+    <title>introductory regex</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link
+      href="https://apophatic.github.io/atom.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Atom feed for posts"
+    />
+  </head>
+  <header>
+    <nav><a href="/">index</a></nav>
+  </header>
+  <main></main>
+</html>
+<h1>introductory regex</h1>
+<p>2024-02-26</p>
+<p>I have been playing with regular expressions (regex, in short) lately:</p>
+<blockquote><p>Regular expressions (regexes) are patterns that describe strings. We might write a regex for filenames ending in ".jpg". Or we might write one that recognizes phone numbers.</p>
+</blockquote>
+<p>To my surprise, it has been a bit of fun! Although, there is some foreshadowing of headaches in the future. Hmm.</p>
+<p>The introductory regex problem I was stuck with an hour or so ago dealt with the following instructions:</p>
+<blockquote><p>Write a regex that recognizes words that begin and end in "e". (The "e" at the beginning and end of the word must be separate, so the regex should match "ee" but not "e".)</p>
+</blockquote>
+<p>From the outset, this seemed fairly approachable given what I already knew:</p>
+<ul>
+<li><p>The keywords 'begin' and 'end' meant I was working with <em>boundaries</em> and as such, was going to have to use the <code>^</code> and <code>$</code> anchors.</p>
+<ul>
+<li><p>The <code>^</code> anchor denotes the beginning of the string, e.g., <code>/^moon/.test('moonlight')</code> evaluates to <code>true</code> whereas <code>/^moon/.test('milky moon')</code> is <code>false</code>.</p>
+</li>
+<li><p>The <code>$</code> anchor, on the other hand, denotes the end of the string, e.g., for the above two examples, it would evaluate to <code>false</code> and <code>true</code> respectively, given the regex <code>/moon$/</code>.</p>
+</li>
+</ul>
+</li>
+<li><p>Furthermore, the keyword 'separate' infers two things:</p>
+<ul>
+<li><p>(1) The character <code>e</code> is either going to occur <em>one or more times</em> or <em>zero or more times</em> – considering the different variety of possible edge cases, the latter seems like the safe bet. In this area, we are dealing with <em>repetition</em>.</p>
+<ul>
+<li><p><em>One or more times</em> is represented by the <code>+</code> quantifier, e.g., <code>/o+/.test('moon')</code> is <code>true</code>, <code>/a+/.test('moon')</code> is <code>false</code>, and more complex, <code>/mo+on/.test('moon')</code> is <code>true</code>.</p>
+</li>
+<li><p><em>zero or more times</em> is represented by the <code>*</code> quantifier, e.g., <code>/o*/.test('')</code> is true, <code>/n*/.test('moon')</code> is true.</p>
+</li>
+</ul>
+</li>
+<li><p>(2) The clearest generalization: the character <code>e</code> must be present.</p>
+<ul>
+<li><p>Determining presence is helpful with the wildcard metacharacter, <code>.</code>, by factor of matching any character, e.g., <code>/./.test('moon')</code> is true but <code>/./.test('')</code> is false.</p>
+</li>
+<li><p>The critical part of the wildcard is putting <code>.</code> next to another character means that they occur consecutively, e.g., <code>/o./</code> matches an "o" followed by any character while <code>/.o/</code> matches any character followed by an "o".</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>And so, we are at our conclusion: the answer to the problem above is <code>var re = /^e.*e$/</code>. But why is that? I get the beginning and the end but the meat of it is slightly confusing.</p>
+<p><code>e.</code> follows the instructions of seperation, that the <code>e</code> beginning character must be seperated from the <code>e</code> ending character. This is logical. Using the <code>node</code> REPL, <code>/e./.test('e')</code> turns out to be <code>false</code>. The wildcard metacharacter is indicating another character must follow the character <code>e</code> for there to be a match.</p>
+<p>The following asterisk operator in <code>e.*</code> requires similar thinking. For instance, why doesn't <code>e.+</code> suffice? Why does <code>/e.+e/.test('ee')</code> evaluate to <code>false</code>? On the other hand, why does <code>/e.*e/.test('ee')</code> evaluate to <code>true</code>? Well, the former requires at least one instance of seperation between <code>ee</code> to occur whereas the latter allows for zero instances of seperation between <code>ee</code> to occur. </p>
+<p>Above all, I'm looking forward to getting deeper into regex. They might be handy in some particular cases. I'm here instinctively thinking of using regex to mask my e-mail if it's listed on a public website. Who knows? While fun to work through, I'm able to foresee regular expressions becoming exceedingly complex.</p>
+<footer>
+  <small>
+    Back to the <a href="#"><span>&uarr;</span> top of the page</a>. </small
+  ><br />
+  <small>
+    This site is generated by <a href="https://barf.btxx.org/">barf</a>. </small
+  ><br />
+  <small>
+    The <a href="/atom.xml">content for this site</a> is &copy;
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"
+      >CC BY-NC-SA</a
+    >. </small
+  ><br />
+  <small>
+    The
+    <a href="https://github.com/apophatic/apophatic.github.io"
+      >code for this site</a
+    >
+    is &copy; <a href="https://opensource.org/license/mit/">MIT</a>.
+  </small>
+</footer>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>dilettantish log</title>
+	<link href="https://apophatic.github.io/atom.xml" rel="self" />
+	<updated>2024-03-15T15:04:17Z</updated>
+	<author>
+		<name>blah</name>
+	</author>
+	<id>https://apophatic.github.io,2024-03-15:default-atom-feed/</id>
+	<entry>
+		<title>xml-based library</title>
+		<content type="html">&lt;h1&gt;xml-based library&lt;/h1&gt;
+&lt;p&gt;2023-11-16&lt;/p&gt;
+&lt;p&gt;Having never seriously used XML, I decided to build a library page, a list of some of my favorite creative works in a table format, with it. The source of the library page is an XML document, albeit, a fairly simple one at the moment:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;library&amp;gt;
+	&amp;lt;book category=&amp;quot;theology&amp;quot;&amp;gt;
+		&amp;lt;title&amp;gt;God In Our Hands&amp;lt;/title&amp;gt;
+		&amp;lt;author&amp;gt;Graham Shaw&amp;lt;/author&amp;gt;
+		&amp;lt;publisher&amp;gt;SCM Press&amp;lt;/publisher&amp;gt;
+		&amp;lt;year&amp;gt;1987&amp;lt;/year&amp;gt;
+		&amp;lt;read&amp;gt;Fall 2023&amp;lt;/read&amp;gt;
+	&amp;lt;/book&amp;gt;
+&amp;lt;/library&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As usual, convert the XML to XSLT:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;xsl:stylesheet version=&amp;quot;1.0&amp;quot; xmlns:xsl=&amp;quot;http://www.w3.org/1999/XSL/Transform&amp;quot;&amp;gt;
+&amp;lt;xsl:template match=&amp;quot;/&amp;quot;&amp;gt;
+	&amp;lt;html&amp;gt;
+	&amp;lt;head&amp;gt;
+		&amp;lt;title&amp;gt;library&amp;lt;/title&amp;gt;
+	&amp;lt;/head&amp;gt;
+	&amp;lt;body&amp;gt;
+		&amp;lt;h1&amp;gt;library&amp;lt;/h1&amp;gt;
+		&amp;lt;p&amp;gt;A list of some of my favorite creative works.
+		&amp;lt;/p&amp;gt;
+		&amp;lt;hr/&amp;gt;
+		&amp;lt;table&amp;gt;
+      		&amp;lt;tr&amp;gt;
+        		&amp;lt;th&amp;gt;title&amp;lt;/th&amp;gt;
+    			&amp;lt;th&amp;gt;author&amp;lt;/th&amp;gt;
+    			&amp;lt;th&amp;gt;publisher&amp;lt;/th&amp;gt;
+    			&amp;lt;th&amp;gt;year&amp;lt;/th&amp;gt;
+    			&amp;lt;th&amp;gt;read&amp;lt;/th&amp;gt;
+      		&amp;lt;/tr&amp;gt;
+      		&amp;lt;xsl:for-each select=&amp;quot;library/book&amp;quot;&amp;gt;
+      		&amp;lt;tr&amp;gt;
+    			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;title&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;author&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;publisher&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;year&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;read&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+      		&amp;lt;/tr&amp;gt;
+      		&amp;lt;/xsl:for-each&amp;gt;
+   		&amp;lt;/table&amp;gt;
+	&amp;lt;/body&amp;gt;
+	&amp;lt;/html&amp;gt;
+&amp;lt;/xsl:template&amp;gt;
+&amp;lt;/xsl:stylesheet&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Considering the structure of my website, the above two files, &lt;code&gt;library.xml&lt;/code&gt; and &lt;code&gt;library.xslt&lt;/code&gt; are standalone at the root of the website given they are unnecessary to the production of the website, i.e., they are not part of the makefile. This is logical: none of those files outputs to something web-friendly to display.&lt;/p&gt;
+&lt;p&gt;And therefore, a handy library already pre-installed on macOS computers: &lt;a href=&quot;https://opensource.apple.com/source/libxslt/libxslt-5/libxslt/doc/xsltproc.html&quot;&gt;xsltproc&lt;/a&gt;, a command line xslt processor.&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;xsltproc is a command line tool for applying XSLT stylesheets to XML documents. It is part of libxslt, the XSLT C library for GNOME. While it was developed as part of the GNOME project, it can operate independently of the GNOME desktop.&lt;/p&gt;
+&lt;p&gt;xsltproc is invoked from the command line with the name of the stylesheet to be used followed by the name of the file or files to which the stylesheet is to be applied.&lt;/p&gt;
+&lt;p&gt;If a stylesheet is included in an XML document with a Stylesheet Processing Instruction, no stylesheet need be named at the command line. xsltproc will automatically detect the included stylesheet and use it.&lt;/p&gt;
+&lt;p&gt;By default, output is to stdout. You can specify a file for output using the &lt;code&gt;-o&lt;/code&gt; option.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;At the root of my website, I run:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;xsltproc -o ./pages/library.md  library.xslt library.xml
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This applies the XSLT file to the XML file and through XSLT converts it to HTML. The output file is placed right in my pages folder where it gets rendered not only as a proper document but also according to my already defined stylesheet. I leave the output file, the HTML document, untouched. Note: Markdown automatically converts HTML to Markdown.&lt;/p&gt;</content>
+		<link href="https://apophatic.github.io/xml-based-reading-log"/>
+		<id>https://apophatic.github.io/xml-based-reading-log</id>
+		<updated>2023-11-16T10:00:00Z</updated>
+		<published>2023-11-16T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>the cost of modern web development</title>
+		<content type="html">&lt;h1&gt;the cost of modern web development&lt;/h1&gt;
+&lt;p&gt;2023-10-17&lt;/p&gt;
+&lt;p&gt;The other night, I was uninstalling unnecessary packages I had installed with &lt;code&gt;brew&lt;/code&gt; and realized there were far too many to account for. Instead of going through each package in &lt;code&gt;brew list&lt;/code&gt; and looking up its respective purpose, I decided to purge the entire formulae:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;brew remove --force $(brew list --formula)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Unfortunately, I came to the realization I was using a no longer supported version of macOS and as such, no longer supported by Homebrew. The consequence? Installing &lt;code&gt;node&lt;/code&gt; via &lt;code&gt;brew&lt;/code&gt; took rather long given it had to run the &lt;code&gt;node&lt;/code&gt; &lt;code&gt;make&lt;/code&gt; file, if I&#39;m correct.&lt;/p&gt;
+&lt;p&gt;But otherwise, reinstalling the necessary packages, I was not surprised to infer the large memory cost of modern web development, i.e., Node.js-based development:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;brew install node&lt;/code&gt; requires ~58MB.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;node&lt;/code&gt;&#39;s dependencies account for another ~242MB.&lt;/li&gt;
+&lt;li&gt;Furthermore, take into account, for a given project, the &lt;code&gt;node_modules&lt;/code&gt; folder and all the &lt;code&gt;&amp;quot;dependencies&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;devDependencies&amp;quot;&lt;/code&gt;, and their dependencies, ad infinitum.&lt;/li&gt;
+&lt;li&gt;Regardless of the latter ending up in a &lt;code&gt;.gitignore&lt;/code&gt;, the memory requirements of modern web development is seemingly complex.&lt;/li&gt;
+&lt;/ul&gt;</content>
+		<link href="https://apophatic.github.io/the-cost-of-modern-webdev"/>
+		<id>https://apophatic.github.io/the-cost-of-modern-webdev</id>
+		<updated>2023-10-17T10:00:00Z</updated>
+		<published>2023-10-17T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>introductory regex</title>
+		<content type="html">&lt;h1&gt;introductory regex&lt;/h1&gt;
+&lt;p&gt;2024-02-26&lt;/p&gt;
+&lt;p&gt;I have been playing with regular expressions (regex, in short) lately:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Regular expressions (regexes) are patterns that describe strings. We might write a regex for filenames ending in &quot;.jpg&quot;. Or we might write one that recognizes phone numbers.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To my surprise, it has been a bit of fun! Although, there is some foreshadowing of headaches in the future. Hmm.&lt;/p&gt;
+&lt;p&gt;The introductory regex problem I was stuck with an hour or so ago dealt with the following instructions:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Write a regex that recognizes words that begin and end in &quot;e&quot;. (The &quot;e&quot; at the beginning and end of the word must be separate, so the regex should match &quot;ee&quot; but not &quot;e&quot;.)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;From the outset, this seemed fairly approachable given what I already knew:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The keywords &#39;begin&#39; and &#39;end&#39; meant I was working with &lt;em&gt;boundaries&lt;/em&gt; and as such, was going to have to use the &lt;code&gt;^&lt;/code&gt; and &lt;code&gt;$&lt;/code&gt; anchors.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The &lt;code&gt;^&lt;/code&gt; anchor denotes the beginning of the string, e.g., &lt;code&gt;/^moon/.test(&#39;moonlight&#39;)&lt;/code&gt; evaluates to &lt;code&gt;true&lt;/code&gt; whereas &lt;code&gt;/^moon/.test(&#39;milky moon&#39;)&lt;/code&gt; is &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;code&gt;$&lt;/code&gt; anchor, on the other hand, denotes the end of the string, e.g., for the above two examples, it would evaluate to &lt;code&gt;false&lt;/code&gt; and &lt;code&gt;true&lt;/code&gt; respectively, given the regex &lt;code&gt;/moon$/&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Furthermore, the keyword &#39;separate&#39; infers two things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;(1) The character &lt;code&gt;e&lt;/code&gt; is either going to occur &lt;em&gt;one or more times&lt;/em&gt; or &lt;em&gt;zero or more times&lt;/em&gt; – considering the different variety of possible edge cases, the latter seems like the safe bet. In this area, we are dealing with &lt;em&gt;repetition&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;One or more times&lt;/em&gt; is represented by the &lt;code&gt;+&lt;/code&gt; quantifier, e.g., &lt;code&gt;/o+/.test(&#39;moon&#39;)&lt;/code&gt; is &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;/a+/.test(&#39;moon&#39;)&lt;/code&gt; is &lt;code&gt;false&lt;/code&gt;, and more complex, &lt;code&gt;/mo+on/.test(&#39;moon&#39;)&lt;/code&gt; is &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;zero or more times&lt;/em&gt; is represented by the &lt;code&gt;*&lt;/code&gt; quantifier, e.g., &lt;code&gt;/o*/.test(&#39;&#39;)&lt;/code&gt; is true, &lt;code&gt;/n*/.test(&#39;moon&#39;)&lt;/code&gt; is true.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(2) The clearest generalization: the character &lt;code&gt;e&lt;/code&gt; must be present.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Determining presence is helpful with the wildcard metacharacter, &lt;code&gt;.&lt;/code&gt;, by factor of matching any character, e.g., &lt;code&gt;/./.test(&#39;moon&#39;)&lt;/code&gt; is true but &lt;code&gt;/./.test(&#39;&#39;)&lt;/code&gt; is false.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The critical part of the wildcard is putting &lt;code&gt;.&lt;/code&gt; next to another character means that they occur consecutively, e.g., &lt;code&gt;/o./&lt;/code&gt; matches an &quot;o&quot; followed by any character while &lt;code&gt;/.o/&lt;/code&gt; matches any character followed by an &quot;o&quot;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And so, we are at our conclusion: the answer to the problem above is &lt;code&gt;var re = /^e.*e$/&lt;/code&gt;. But why is that? I get the beginning and the end but the meat of it is slightly confusing.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;e.&lt;/code&gt; follows the instructions of seperation, that the &lt;code&gt;e&lt;/code&gt; beginning character must be seperated from the &lt;code&gt;e&lt;/code&gt; ending character. This is logical. Using the &lt;code&gt;node&lt;/code&gt; REPL, &lt;code&gt;/e./.test(&#39;e&#39;)&lt;/code&gt; turns out to be &lt;code&gt;false&lt;/code&gt;. The wildcard metacharacter is indicating another character must follow the character &lt;code&gt;e&lt;/code&gt; for there to be a match.&lt;/p&gt;
+&lt;p&gt;The following asterisk operator in &lt;code&gt;e.*&lt;/code&gt; requires similar thinking. For instance, why doesn&#39;t &lt;code&gt;e.+&lt;/code&gt; suffice? Why does &lt;code&gt;/e.+e/.test(&#39;ee&#39;)&lt;/code&gt; evaluate to &lt;code&gt;false&lt;/code&gt;? On the other hand, why does &lt;code&gt;/e.*e/.test(&#39;ee&#39;)&lt;/code&gt; evaluate to &lt;code&gt;true&lt;/code&gt;? Well, the former requires at least one instance of seperation between &lt;code&gt;ee&lt;/code&gt; to occur whereas the latter allows for zero instances of seperation between &lt;code&gt;ee&lt;/code&gt; to occur. &lt;/p&gt;
+&lt;p&gt;Above all, I&#39;m looking forward to getting deeper into regex. They might be handy in some particular cases. I&#39;m here instinctively thinking of using regex to mask my e-mail if it&#39;s listed on a public website. Who knows? While fun to work through, I&#39;m able to foresee regular expressions becoming exceedingly complex.&lt;/p&gt;</content>
+		<link href="https://apophatic.github.io/introductory-regex-problem"/>
+		<id>https://apophatic.github.io/introductory-regex-problem</id>
+		<updated>2024-02-26T10:00:00Z</updated>
+		<published>2024-02-26T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>interaction-heavy, information-weak</title>
+		<content type="html">&lt;h1&gt;interaction-heavy, information-weak&lt;/h1&gt;
+&lt;p&gt;2023-12-11&lt;/p&gt;
+&lt;p&gt;What makes accessibility difficult is the thin-line it operates in so as not to fall under this all too common software curse of being interaction-heavy but information-weak. The high degree of criticality in accessibility often means the user&#39;s intention lies outside interactivity. As for the rest, interaction must be enjoyable and educational lest our design fails in the domain of information software.&lt;/p&gt;</content>
+		<link href="https://apophatic.github.io/interaction-heavy-information-weak"/>
+		<id>https://apophatic.github.io/interaction-heavy-information-weak</id>
+		<updated>2023-12-11T10:00:00Z</updated>
+		<published>2023-12-11T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>from latex to typst</title>
+		<content type="html">&lt;h1&gt;from latex to typst&lt;/h1&gt;
+&lt;p&gt;2023-11-13&lt;/p&gt;
+&lt;p&gt;For as long as I remember, I&#39;ve been using LaTeX, the typesetting system, for updating my résumé. My editor of choice was, not the web-based editor &lt;a href=&quot;https://www.overleaf.com/&quot;&gt;Overleaf&lt;/a&gt;, but rather, &lt;a href=&quot;https://pages.uoregon.edu/koch/&quot;&gt;Richard Koch&#39;s&lt;/a&gt; &lt;a href=&quot;https://pages.uoregon.edu/koch/texshop/&quot;&gt;TeXShop&lt;/a&gt;–initially released in 2000.&lt;/p&gt;
+&lt;p&gt;It was always fun and interesting looking up solutions on the &lt;a href=&quot;https://tex.stackexchange.com/&quot;&gt;TeX Stack Exchange&lt;/a&gt; for things I wanted to do but would quickly run into a wall trying to do. I mean, there is seemingly a high amount of material relating to TeX on the web that one is bound to find a solution to their problem eventually. And anyways, there is &lt;a href=&quot;https://www.ctan.org/&quot;&gt;CTAN&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;The Comprehensive TEX Archive Network (CTAN) is the central place for all kinds of material around TEX. CTAN has currently 6511 packages. 2955 contributors have contributed to it. Most of the packages are free and can be downloaded and used immediately.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;On the other hand, I came across &lt;a href=&quot;https://typst.app&quot;&gt;Typst&lt;/a&gt;, a brand new typesetting system, a few months ago but it wasn&#39;t until a few nights ago that I played around with it. It might be that since I never had a web-based editor workflow (e.g., Overleaf) for working with LaTeX, I never realized the easy possibility of fledging out a fairly customized document quickly (i.e., without &lt;em&gt;building the document&lt;/em&gt; as you do on TeXShop).&lt;/p&gt;
+&lt;p&gt;What I like most about Typst, compared to TeX, is its syntax. The below shows what creating a simple rule looks like, which one may easily decipher:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-typst&quot;&gt;#show heading.where(
+  level: 2
+): it =&amp;gt; {
+  smallcaps(it)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Above all, shall we say: The safest general characterization of the typesetting system tradition is that it consists of a series of footnotes to TeX? For now, I&#39;m using Typst exclusively. Although, given how new it is, I wouldn&#39;t be surprised in significant shortcomings.&lt;/p&gt;</content>
+		<link href="https://apophatic.github.io/from-latex-to-typst"/>
+		<id>https://apophatic.github.io/from-latex-to-typst</id>
+		<updated>2023-11-13T10:00:00Z</updated>
+		<published>2023-11-13T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>accessible images: :after</title>
+		<content type="html">&lt;h1&gt;accessible images: :after&lt;/h1&gt;
+&lt;p&gt;2023-10-23&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This is specifically an alternate form of the unnecessarily-unstyled-in a-critical-manner broken image logo and alternate text, if added, we typically see for offline images on Chrome. It helps offline images look better on Firefox too. It sees little to no effect on Safari.&lt;/p&gt;
+&lt;p&gt;Styling the &lt;code&gt;img&lt;/code&gt; element to account for offline images–e.g., if the image path is not found, if the image has been deleted, if the connection has been broken and the image did not load, if the webmaster is forbidding the image to load, and so on–is a great accessibility practice.&lt;/p&gt;
+&lt;p&gt;Like we thought for &lt;a href=&quot;/accessible-hyperlinks-after&quot;&gt;accessible externally-pointing hyperlinks&lt;/a&gt;, our thinking is similar here: what we are interested in is the &lt;em&gt;after-the-matter&lt;/em&gt; fact, i.e., &lt;code&gt;:after&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A pre-requisite for the following is to subscribe to the seemingly most pressing accessibility issue on the web: using the &lt;code&gt;img&lt;/code&gt; element&#39;s &lt;code&gt;alt&lt;/code&gt; property.&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;The &lt;code&gt;HTMLImageElement&lt;/code&gt; property &lt;code&gt;alt&lt;/code&gt; provides fallback (alternate) text to display when the image specified by the &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; element is not loaded.&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;Perhaps the most important reason to use the &lt;code&gt;alt&lt;/code&gt; property is to support accessibility, as the &lt;code&gt;alt&lt;/code&gt; text may be used by screen readers and other assistive technologies to help differently-abled users make full use of your content. It will be read aloud or sent to the touch device, for example, to support visually impaired users.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now, the first on this log, something handy for our situation, a CSS function.&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;The &lt;code&gt;attr()&lt;/code&gt; CSS function is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. It can also be used on pseudo-elements, in which case the value of the attribute on the pseudo-element&#39;s originating element is returned.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;You may now suddenly infer what we are doing. If a visitor to our website can&#39;t retrieve a particular image, we throw out the particular &lt;code&gt;alt&lt;/code&gt; text for the respective image to indicate what the image was. This is incredibly useful but not surprising:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;img:after {
+  content: attr(alt);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But what we are doing further, and this is the critical part of our situation, is styling this in a critically-conscious manner compared to the default.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;img {
+  max-width: 100%;
+  min-height: 4em;
+  height: auto;
+
+  /* :after styling necessities */
+  display: block;
+  position: relative;
+}
+
+img:after {
+  font-size: 90%;
+
+  /* spit out the alt text */
+  content: attr(alt);
+
+  /* vertically center the alt text */
+  display: grid;
+  align-content: center;
+
+  /* horizontally center the alt text */
+  text-align: center;
+
+  /* overlap default alt text */
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* make lack of image distinctive */
+  background: gray;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The result for an image not found locally of the Milky Way Galaxy:&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;accessible-image&quot; src=&quot;../public/images/milky-way-galaxy.jpg&quot; alt=&quot;Picture of the Milky Way Galaxy&quot;&gt;
+&lt;/p&gt;</content>
+		<link href="https://apophatic.github.io/accessible-images-after"/>
+		<id>https://apophatic.github.io/accessible-images-after</id>
+		<updated>2023-10-23T10:00:00Z</updated>
+		<published>2023-10-23T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>accessible hyperlinks: :after</title>
+		<content type="html">&lt;h1&gt;accessible hyperlinks: :after&lt;/h1&gt;
+&lt;p&gt;2023-10-05&lt;/p&gt;
+&lt;p&gt;A way to make hyperlinks accessible is by explictly informing the user when a hyperlink points externally. An option for this would be to use a north east arrow immediately after a hyperlink to denote it is &lt;em&gt;going outside&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Now, we don&#39;t want to have to copy and paste the HTML entity, HTML code, hex code, or even the UTF-8 character itself each time for an external hyperlink. Luckily, CSS has &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors&quot;&gt;attribute selectors&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;The CSS attribute selector matches elements based on the element having a given attribute explicitly set, with options for defining an attribute value or substring value match.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is to mean we can have an anchor element, &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;, with an attribute, in our case &lt;code&gt;href&lt;/code&gt;, matching a particular value, &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors#attrvalue_6&quot;&gt;&lt;code&gt;[attr*=value]&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Represents elements with an attribute name of attr whose value contains at least one occurrence of value within the string.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If we reflect a bit on what differentiates a local-pointing hyperlink versus an external-pointing hyperlink, we may come to the conclusion that external hyperlinks have two forward slashes in that &lt;code&gt;https://&lt;/code&gt;. Where we are currently: &lt;code&gt;a[href*=&amp;quot;//&amp;quot;]&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#href&quot;&gt;&lt;code&gt;href&lt;/code&gt;&lt;/a&gt; is not strictly restricted to HTTP-based URLs, e.g.: &lt;code&gt;tel:&lt;/code&gt;, &lt;code&gt;mailto:&lt;/code&gt;, and &lt;code&gt;sms&lt;/code&gt;. Therefore, we may also have something like &lt;code&gt;a[href*=&amp;quot;mailto:&amp;quot;]&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;At this point, we want to create a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements&quot;&gt;pseudo-element&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element(s).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What we are interested in our particular case is the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/::after&quot;&gt;&lt;code&gt;::after&lt;/code&gt;&lt;/a&gt; psuedo-element:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;In CSS, &lt;code&gt;::after&lt;/code&gt; creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/content&quot;&gt;&lt;code&gt;content&lt;/code&gt;&lt;/a&gt; property. It is inline by default.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;As mentioned above, &lt;code&gt;::after&lt;/code&gt;, indeed, is commonly used to add cosmetic content:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;The &lt;code&gt;content&lt;/code&gt; CSS property replaces content with a generated value. It can be used to define what is rendered inside an element or pseudo-element. For elements, the content property specifies whether the element renders normally (&lt;code&gt;normal&lt;/code&gt; or &lt;code&gt;none&lt;/code&gt;) or is replaced with an image (and associated &quot;alt&quot; text). For pseudo-elements and margin boxes, &lt;code&gt;content&lt;/code&gt; defines the content as images, text, both, or none, which determines whether the element renders at all.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The &lt;a href=&quot;https://www.toptal.com/designers/htmlarrows/arrows/north-east-arrow/&quot;&gt;CSS code for a north east arrow&lt;/a&gt; is the &lt;code&gt;\2197&lt;/code&gt;. And so:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;a[href*=&amp;quot;//&amp;quot;]::after {
+  display: inline-block;
+  /* north east arrow */
+  content: &amp;quot;\2197&amp;quot;;
+}
+&lt;/code&gt;&lt;/pre&gt;</content>
+		<link href="https://apophatic.github.io/accessible-hyperlinks-after"/>
+		<id>https://apophatic.github.io/accessible-hyperlinks-after</id>
+		<updated>2023-10-05T10:00:00Z</updated>
+		<published>2023-10-05T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>accessible hyperlinks: :active</title>
+		<content type="html">&lt;h1&gt;accessible hyperlinks: :active&lt;/h1&gt;
+&lt;p&gt;2023-10-21&lt;/p&gt;
+&lt;p&gt;To do accessibility on the web justice, it isn&#39;t enough having hyperlinks solely differentiated by their default styling provided by a browser&#39;s user agent stylesheet. I have been indifferent and susceptible to not doing this for a long time but over the years, I&#39;ve noticed this on a fair share of websites and I thought it was accessibly neat.&lt;/p&gt;
+&lt;p&gt;What I&#39;m talking about is this behavior you typically see in a &lt;code&gt;form&lt;/code&gt; input: an outline when you focus-in on the field. We may just as well fully adopt it for anchor elements.&lt;/p&gt;
+&lt;p&gt;What we&#39;ll need is the &lt;code&gt;:active&lt;/code&gt; pseudo-class:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;The &lt;code&gt;:active&lt;/code&gt; CSS pseudo-class represents an element (such as a button) that is being activated by the user. When using a mouse, &quot;activation&quot; typically starts when the user presses down the primary mouse button.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And the &lt;code&gt;outline&lt;/code&gt; CSS property:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Outline is a line outside of the element&#39;s border. Unlike other areas of the box, outlines don&#39;t take up space, so they don&#39;t affect the layout of the document in any way.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Therefore, the standard for hyperlinks around the web should have something like this (as used on this site):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;a:active {
+  outline: 1px solid;
+}
+&lt;/code&gt;&lt;/pre&gt;</content>
+		<link href="https://apophatic.github.io/accessible-hyperlinks-active"/>
+		<id>https://apophatic.github.io/accessible-hyperlinks-active</id>
+		<updated>2023-10-21T10:00:00Z</updated>
+		<published>2023-10-21T10:00:00Z</published>
+	</entry>
+</feed>
