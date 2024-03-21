@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>dilettantish log</title>
+	<title>til</title>
 	<link href="https://apophatic.github.io/atom.xml" rel="self" />
-	<updated>2024-03-15T15:04:17Z</updated>
+	<updated>2024-03-20T22:05:47Z</updated>
 	<author>
 		<name>blah</name>
 	</author>
-	<id>https://apophatic.github.io,2024-03-15:default-atom-feed/</id>
+	<id>https://apophatic.github.io,2024-03-20:default-atom-feed/</id>
 	<entry>
 		<title>xml-based library</title>
 		<content type="html">&lt;h1&gt;xml-based library&lt;/h1&gt;
