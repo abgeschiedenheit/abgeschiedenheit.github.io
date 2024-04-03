@@ -1,3 +1,3 @@
-# til
+# log
 
-Things I've learned pertaining to software.
+Brief logs pertaining to anything under the sun but mostly software.

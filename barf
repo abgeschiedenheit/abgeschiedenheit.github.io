@@ -26,7 +26,7 @@ index_html() {
 	while read -r f title created; do
 		link=$(echo "$f" | gsed -E 's|.*/(.*).md|\1/|')
 		created=$(echo $(head -3 "$f" | tail -1))
-	 	echo "<li><span style="display: hidden">$created:</span> <a href=\"$link\">$title</a></li>"
+	 	echo "<li><span>$created</span> <a href=\"$link\">$title</a></li>"
 	done < "$1" | sort -r
 
 	echo "</ul>"
@@ -95,11 +95,11 @@ index_tsv posts | sort -rt "	" -k 3 > build/posts.tsv
 index_html build/posts.tsv > build/index.html
 atom_xml build/posts.tsv > build/atom.xml
 while read -r f title created; do
-	write_page "$f" "$title" "$created"
+	write_page "$f" "$title" "<span>$created</span>"
 done < build/posts.tsv
 
 # Pages
 index_tsv pages > build/pages.tsv
 while read -r f title created; do
-	write_page "$f" "$title" "$created"
+	write_page "$f" "$title" "<span>$created</span>"
 done < build/pages.tsv
