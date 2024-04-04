@@ -1,15 +1,22 @@
 # resources
 
+A list of tools and services I'm fond of.
+
 ## software
 
 - [Execute Program](https://executeprogram.com)
 > Execute Program is a learning platform built by developers for developers, because we thought there should be a better way to learn – and remember – programming languages and tools.
 
-- [Boot.dev](https://boot.dev)
-> We are a self-paced, gamified online learning platform for back-end web development. You can learn with us for the price of a gym membership.
-
 - [Validators and tools](https://www.w3.org/developers/tools/)
 > Lead your code to its full potential with great and open source tools.
+
+## typography
+
+- [Velvetyne](https://velvetyne.fr)
+> Velvetyne is an association and collective dedicated to researching and disseminating typography and typeface creation. Our efforts manifest through collective creation workshops, public engagements, and the promotion of open, playful tools that embrace an uninhibited approach to typography. Our editorial practice revolves around building a politically and artistically supported typographic universe, collaborating with diverse and engaged authors. Together, we give life to fonts and graphical objects under open licenses, allowing for their use, modification, and redistribution. Additionally, we explore unconventional paths, fostering transparency and inclusivity to make typeface creation more open and dynamic.
+
+- [LettError](https://letterror.com/index.html)
+> LettError has been producing groundbreaking designs since the early days of digital type. Curiosity about why things are done as they are, combined with a dedication to developing new tools, has resulted in a diverse body of work that pushes the boundaries of what type can be and do.
 
 ## accessibility
 

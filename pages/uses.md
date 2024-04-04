@@ -20,13 +20,18 @@ Inspired by the interviews on [Uses This](https://usesthis.com), the following, 
 ### desktop
 - **Password manager:** KeePassXC
 - **Text editor:** NotepadNext
+- **Design tool:** Figma
 - **Terminal:** Terminal.app
   - **Shell:** Bash
   - **Version control system:** Git
+  - **Package manager:** Homebrew
 - **PDF reader:** Preview.app
 - **Music player:** Doppler
 
 ### browser
 - **Browser:** Orion
+  - **Search engine:** Google
+  - **Extensions:** None
 - **Code forge:** GitHub
 - **Document editor:** Typst
+- **Email and cloud storage:** Proton
