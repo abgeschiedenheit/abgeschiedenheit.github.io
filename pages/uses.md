@@ -15,12 +15,10 @@ Inspired by the interviews on [Uses This](https://usesthis.com), the following, 
 - **Headphones:** AKG K371 Wired
 
 ## software
-- **Nameserver:** NextDNS
 
 ### desktop
 - **Password manager:** KeePassXC
 - **Text editor:** NotepadNext
-- **Design tool:** Figma
 - **Terminal:** Terminal.app
   - **Shell:** Bash
   - **Version control system:** Git
@@ -29,9 +27,13 @@ Inspired by the interviews on [Uses This](https://usesthis.com), the following, 
 - **Music player:** Doppler
 
 ### browser
-- **Browser:** Orion
+- **Browser:** Chrome
   - **Search engine:** Google
-  - **Extensions:** None
+  - **Extensions:**
+    - **Password manager link:** KeePassXC-Browser
+    - **Ad blocker:** uBlock Origin
+    - **Keyboard shortcuts:** Vimium
 - **Code forge:** GitHub
 - **Document editor:** Typst
-- **Email and cloud storage:** Proton
+- **Cloud storage:** Dropbox
+- **Email:** Proton

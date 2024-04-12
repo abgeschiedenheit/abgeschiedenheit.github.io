@@ -9,7 +9,7 @@
 	</figcaption>
 </figure>
 
-By profession, interested in sensible web design and development. By calling, interested in philosophy, theology, and literature.
+By profession, interested in sensible web development. By calling, interested in philosophy and literature.
 
 > Every word was once a poem. Every new relation is a new word. (Ralph Waldo Emerson, "The Poet")
 
