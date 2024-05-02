@@ -1,3 +1,3 @@
-# log
+# weblog
 
-Brief logs pertaining to anything under the sun but mostly software. There is an [atom feed](/atom.xml), if that's your jam.
+Brief logs pertaining to all things web. There is an [atom feed](/atom.xml).

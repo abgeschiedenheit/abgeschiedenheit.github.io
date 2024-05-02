@@ -1,39 +1,38 @@
 # uses
 
-Inspired by the interviews on [Uses This](https://usesthis.com), the following, which, by factor of writing them out here, helps with a sense of intention, represents the tools I use in a somewhat regular basis.
-
 ## hardware
 
 ### computer
 - **Laptop:** Mid-2014 13-inch MacBook Pro (Silver)
-- **Keyboard:** HHKB Professional Hybrid Type-S (White/Stamped) Wired
+- **Keyboard:** HHKB Professional HYB Type-S (White/Stamped) Wired
 - **Mouse:** Logitech Signature M650 L Full Size (Graphite) Wireless
 - **Laptop stand:** Yohann MacBook Stand Wood (Walnut)
 
 ### miscellaneous
-- **Phone:** Light Phone II
+- **Phone:** Light Phone II (Light Gray)
 - **Headphones:** AKG K371 Wired
 
 ## software
 
 ### desktop
 - **Password manager:** KeePassXC
-- **Text editor:** NotepadNext
+- **Text editor:** Nova
 - **Terminal:** Terminal.app
   - **Shell:** Bash
   - **Version control system:** Git
   - **Package manager:** Homebrew
+- **Markdown editor:** [Nota](https://nota.md/)
 - **PDF reader:** Preview.app
 - **Music player:** Doppler
 
 ### browser
-- **Browser:** Chrome
-  - **Search engine:** Google
+- **Browser:** Ungoogled Chromium
+  - **Search engine:** Kagi 
   - **Extensions:**
+    - **Extensions functionality:** [chromium-web-store](https://github.com/NeverDecaf/chromium-web-store)
     - **Password manager link:** KeePassXC-Browser
     - **Ad blocker:** uBlock Origin
     - **Keyboard shortcuts:** Vimium
 - **Code forge:** GitHub
 - **Document editor:** Typst
-- **Cloud storage:** Dropbox
-- **Email:** Proton
+- **Email and cloud storage:** Proton

@@ -1,7 +1,5 @@
 # resources
 
-A list of tools and services I'm fond of.
-
 ## software
 
 - [Validators and tools](https://www.w3.org/developers/tools/)
