@@ -1,5 +1,7 @@
 # uses
 
+Inspired by the interviews on [Uses This](https://usesthis.com), the following, which, by factor of writing them out here, helps with a sense of intention, represents the tools I use in a somewhat regular basis.
+
 ## hardware
 
 ### computer
@@ -15,24 +17,22 @@
 ## software
 
 ### desktop
-- **Password manager:** KeePassXC
-- **Text editor:** Nova
+- **Text editor:** [Nova](https://nova.app)
 - **Terminal:** Terminal.app
   - **Shell:** Bash
   - **Version control system:** Git
   - **Package manager:** Homebrew
-- **Markdown editor:** [Nota](https://nota.md/)
-- **PDF reader:** Preview.app
-- **Music player:** Doppler
+- **PDF viewer:** [Sioyek](https://github.com/ahrm/sioyek)
+- **Password manager:** KeePassXC
 
 ### browser
-- **Browser:** Ungoogled Chromium
-  - **Search engine:** Kagi 
+- **Browser:** [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium)
+  - **Search engine:** [Kagi](https://kagi.com)
   - **Extensions:**
-    - **Extensions functionality:** [chromium-web-store](https://github.com/NeverDecaf/chromium-web-store)
-    - **Password manager link:** KeePassXC-Browser
+    - **Extensions integration:** [chromium-web-store](https://github.com/NeverDecaf/chromium-web-store)
+    - **Password manager integration:** KeePassXC-Browser
     - **Ad blocker:** uBlock Origin
-    - **Keyboard shortcuts:** Vimium
+    - **Keyboard shortcuts:** [Vimium](https://vimium.github.io/)
 - **Code forge:** GitHub
-- **Document editor:** Typst
+- **Document editor:** [Typst](https://typst.app/)
 - **Email and cloud storage:** Proton

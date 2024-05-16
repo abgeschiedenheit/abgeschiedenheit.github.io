@@ -1,3 +1,3 @@
-# weblog
+# abgeschiedenheit
 
-Brief logs pertaining to all things web. There is an [atom feed](/atom.xml).
+<abbr title="World Wide Web">WWW</abbr> testimonia.
