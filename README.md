@@ -1,3 +1,1 @@
-# manticmoon.github.io
-
-A personal homepage.
+# abgeschiedenheit.github.io
