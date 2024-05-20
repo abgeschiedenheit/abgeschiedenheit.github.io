@@ -9,9 +9,9 @@
 	</figcaption>
 </figure>
 
-Interested in sensible web development, design, and accessibility.
+Mexican-born, California-based late-twenty-something. By profession, interested in sensible web development, design, and accessibility. By calling, interested in peculiar literature and philosophy.
 
-Reachable at `gottesminne` at [the positively-charged atomic particle]mail.com.
+As the domain suggests, you may find me on [GitHub](https://github.com/abgeschiedenheit). Otherwise, you may reach me at `gottesminne` at [the name of the positive-charged subatomic particle]mail.com.
 
 ## about the website
 

@@ -17,13 +17,14 @@ Inspired by the interviews on [Uses This](https://usesthis.com), the following, 
 ## software
 
 ### desktop
-- **Text editor:** [Nova](https://nova.app)
+- **Password manager:** KeePassXC
+- **Text editor:** [Notepad Next](https://github.com/dail8859/NotepadNext)
 - **Terminal:** Terminal.app
   - **Shell:** Bash
   - **Version control system:** Git
   - **Package manager:** Homebrew
-- **PDF viewer:** [Sioyek](https://github.com/ahrm/sioyek)
-- **Password manager:** KeePassXC
+- **PDF viewer:** [Skim](https://skim-app.sourceforge.io/)
+- **Audio player:** [foobar2000](https://www.foobar2000.org/)
 
 ### browser
 - **Browser:** [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium)
@@ -33,6 +34,8 @@ Inspired by the interviews on [Uses This](https://usesthis.com), the following, 
     - **Password manager integration:** KeePassXC-Browser
     - **Ad blocker:** uBlock Origin
     - **Keyboard shortcuts:** [Vimium](https://vimium.github.io/)
+    - **Notes & lists:** [My Notes](https://github.com/penge/my-notes)
+    - **Website blocker:** [Block Site](https://github.com/penge/block-site)
 - **Code forge:** GitHub
 - **Document editor:** [Typst](https://typst.app/)
 - **Email and cloud storage:** Proton
