@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>abgeschiedenheit</title>
+	<title>weblog</title>
 	<link href="https://abgeschiedenheit.github.io/atom.xml" rel="self" />
-	<updated>2024-05-19T20:00:53Z</updated>
+	<updated>2024-05-21T23:53:42Z</updated>
 	<author>
 		<name>abgeschiedenheit</name>
 	</author>
-	<id>https://abgeschiedenheit.github.io,2024-05-19:default-atom-feed/</id>
+	<id>https://abgeschiedenheit.github.io,2024-05-21:default-atom-feed/</id>
 	<entry>
 		<title>xml-based library</title>
 		<content type="html">&lt;h1&gt;xml-based library&lt;/h1&gt;

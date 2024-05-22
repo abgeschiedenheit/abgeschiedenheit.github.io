@@ -32,6 +32,9 @@ A list of tools and services I find rather neat.
 - [Color & Contrast](https://colorandcontrast.com/)
 > A comprehensive guide for exploring and learning about the theory, science, and perception of color and contrast.
 
+- [WCAG Contrast Checker](https://contrastchecker.com/)
+> This tool is built for designers and developers to test color contrast compliance with the [Web Content Accessibility Guidelines](https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast) (WCAG) as set forth by the World Wide Web Consortium (W3C). These calculations are based on the [formulas specified by the W3C](https://www.w3.org/TR/AERT#color-contrast).
+
 ## accessibility
 
 - [The WCAG Explained](https://www.getstark.co/wcag-explained/)

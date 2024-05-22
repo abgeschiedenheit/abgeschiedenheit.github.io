@@ -27,15 +27,14 @@ Inspired by the interviews on [Uses This](https://usesthis.com), the following, 
 - **Audio player:** [foobar2000](https://www.foobar2000.org/)
 
 ### browser
-- **Browser:** [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium)
-  - **Search engine:** [Kagi](https://kagi.com)
+- **Browser:** Firefox
+  - **Search engine:** Google :/
   - **Extensions:**
-    - **Extensions integration:** [chromium-web-store](https://github.com/NeverDecaf/chromium-web-store)
     - **Password manager integration:** KeePassXC-Browser
     - **Ad blocker:** uBlock Origin
     - **Keyboard shortcuts:** [Vimium](https://vimium.github.io/)
-    - **Notes & lists:** [My Notes](https://github.com/penge/my-notes)
     - **Website blocker:** [Block Site](https://github.com/penge/block-site)
 - **Code forge:** GitHub
 - **Document editor:** [Typst](https://typst.app/)
+- **Outliner:** Workflowy
 - **Email and cloud storage:** Proton
