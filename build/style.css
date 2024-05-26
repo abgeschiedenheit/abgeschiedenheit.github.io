@@ -26,74 +26,24 @@
   font-style: italic;
 }
 
-@font-face {
-  font-family: "cmu-serif";
-  src: url("public/cmu-serif.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "cmu-serif";
-  src: url("public/cmu-serif-italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "cmu-serif";
-  src: url("public/cmu-serif-bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "cmu-serif";
-  src: url("public/cmu-serif-bold-italic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "cmu-sans";
-  src: url("public/cmu-sans.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "cmu-sans";
-  src: url("public/cmu-sans-italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "cmu-sans";
-  src: url("public/cmu-sans-bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-
 html {
   background-color: thistle;
 }
 
 body {
-  font-family: 'cmu-sans', sans-serif;
-  font-size: 110%;
+  font-family: 'cmu', monospace;
+  font-size: 120%;
   background: snow;
   border: 2px solid silver;
   color: #111;
   margin: 2rem auto;
-  max-width: 38rem;
+  max-width: 42rem;
   line-height: 1.6;
   padding: 2rem;
 }
 
 a:link {
-  padding: 0 2px;
+  padding: 0 1px;
   color: #6d0092;
   text-decoration: underline solid 2px;
 }
@@ -103,12 +53,13 @@ a[href*="//"]::after {
 }
 
 a:active {
-  outline: 2px dotted #6d0092;
+  outline: 2px solid #6d0092;
 }
 
 h1, h2, h3, h4 {
-  font-family: "cmu-serif", serif;
+  font-family: "cmu", monospace;
   line-height: 1.4;
+  border-bottom: 2px solid silver;
 }
 
 img {
@@ -136,10 +87,12 @@ img:after {
 }
 
 nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   background: #eee;
   border: 2px solid silver;
-  padding: 0.05rem 1rem;
-  text-align: center;
+  padding: 0.16rem 1rem;
 }
 
 blockquote {
@@ -222,10 +175,13 @@ small a:visited {
 
 small a:active {
   color: #555;
-  outline: 1px solid #555;
+  outline: 2px solid #555;
 }
 
 footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: 2rem;
   text-align: center;
   line-height: 1.4;

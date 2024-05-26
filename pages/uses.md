@@ -5,13 +5,13 @@ Inspired by the interviews on [Uses This](https://usesthis.com), the following, 
 ## hardware
 
 ### computer
-- **Laptop:** Mid-2014 13-inch MacBook Pro (Silver)
-- **Keyboard:** HHKB Professional HYB Type-S (White/Stamped) Wired
-- **Mouse:** Logitech Signature M650 L Full Size (Graphite) Wireless
-- **Laptop stand:** Yohann MacBook Stand Wood (Walnut)
+- **Laptop:** Mid-2014 13-inch MacBook Pro
+- **Keyboard:** HHKB Professional HYBRID Type-S Wired
+- **Mouse:** Logitech Signature M650 L Full Size Wireless
+- **Laptop stand:** Yohann MacBook Stand Wood
 
 ### miscellaneous
-- **Phone:** Light Phone II (Light Gray)
+- **Phone:** Light Phone II
 - **Headphones:** AKG K371 Wired
 
 ## software
@@ -27,14 +27,17 @@ Inspired by the interviews on [Uses This](https://usesthis.com), the following, 
 - **Audio player:** [foobar2000](https://www.foobar2000.org/)
 
 ### browser
-- **Browser:** Firefox
-  - **Search engine:** Google :/
+- **Browser:** LibreWolf
+  - **Search engine:** Kagi
   - **Extensions:**
-    - **Password manager integration:** KeePassXC-Browser
-    - **Ad blocker:** uBlock Origin
-    - **Keyboard shortcuts:** [Vimium](https://vimium.github.io/)
+    - **Password manager plugin:** KeePassXC-Browser
+    - **Content blocker:** uBlock Origin
+    - **Tracker blocker:** Privacy Badger
     - **Website blocker:** [Block Site](https://github.com/penge/block-site)
+    - **Cookie deleter:** Cookie AutoDelete
+    - **Warning cookie remover:** I still don't care about cookies
+    - **WCAG accessibility evaluator:** [AInspector](https://addons.mozilla.org/en-GB/firefox/addon/ainspector-wcag/)
+    - **Keyboard shortcuts:** Vimium
 - **Code forge:** GitHub
-- **Document editor:** [Typst](https://typst.app/)
-- **Outliner:** Workflowy
+- **Document editor:** Typst
 - **Email and cloud storage:** Proton

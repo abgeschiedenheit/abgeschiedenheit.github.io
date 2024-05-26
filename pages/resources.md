@@ -21,6 +21,9 @@ A list of tools and services I find rather neat.
 - [Use & Modify](https://usemodify.com/)
 > This is a personal selection of beautiful, classy, punk, professional, incomplete, weird typefaces. Open source licenses make them free to use and modify. This selection is the result of deep search and crushes.
 
+- [Tunera Type Foundry](https://www.tunera.xyz/)
+> Tunera is a transnational type foundry, that aims to present new and original typefaces for everyone. Tunera Type Foundry got its name from the Indian fig cactus, called “tunera” in Spanish, because it offers sharp font picks, rich curves and lots of flavor.
+
 ## general typography
 - [Wakamai Fondue](https://wakamaifondue.com/)
 > Wakamai Fondue is a tool that answers the question “What can my font do?”
@@ -35,6 +38,9 @@ A list of tools and services I find rather neat.
 - [WCAG Contrast Checker](https://contrastchecker.com/)
 > This tool is built for designers and developers to test color contrast compliance with the [Web Content Accessibility Guidelines](https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast) (WCAG) as set forth by the World Wide Web Consortium (W3C). These calculations are based on the [formulas specified by the W3C](https://www.w3.org/TR/AERT#color-contrast).
 
+- [Random A11y](https://randoma11y.com/)
+> Vote on random a11y color combinations 
+
 ## accessibility
 
 - [The WCAG Explained](https://www.getstark.co/wcag-explained/)
@@ -45,6 +51,15 @@ A list of tools and services I find rather neat.
 
 - [The Centre for Excellence in Universal Design (CEUD)](https://universaldesign.ie)
 > The Centre for Excellence in Universal Design (CEUD) is dedicated to enabling the design of environments that can be accessed, understood and used regardless of a person's age, size, ability or disability. We are a part of the National Disability Authority.
+
+- [CAST](https://www.cast.org/)
+> CAST is a multifaceted organization with a singular ambition: Bust the barriers to learning that millions of people experience every day. We do this by helping educators and organizations apply insights from the learning sciences and leading-edge practices to educational design and implementation.
+
+- [A11y Coffee](https://a11y.coffee/)
+> Pick your serving size of web accessibility information
+
+- [a11y Collective](https://www.a11y-collective.com/)
+> Whether you’re a designer, developer, product owner, webmaster or content creator, you have the power to make impact. Just enroll in our courses. Learn at home or on the go and always at your own pace.
 
 ## web design
 - [Radical web design](https://radicalweb.design/en)
