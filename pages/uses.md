@@ -28,14 +28,10 @@ Inspired by the interviews on [Uses This](https://usesthis.com), the following, 
 
 ### browser
 - **Browser:** LibreWolf
-  - **Search engine:** Kagi
+  - **Search engine:** DuckDuckGo
   - **Extensions:**
     - **Password manager plugin:** KeePassXC-Browser
     - **Content blocker:** uBlock Origin
-    - **Tracker blocker:** Privacy Badger
-    - **Website blocker:** [Block Site](https://github.com/penge/block-site)
-    - **Cookie deleter:** Cookie AutoDelete
-    - **Warning cookie remover:** I still don't care about cookies
     - **WCAG accessibility evaluator:** [AInspector](https://addons.mozilla.org/en-GB/firefox/addon/ainspector-wcag/)
     - **Keyboard shortcuts:** Vimium
 - **Code forge:** GitHub
