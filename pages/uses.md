@@ -1,39 +1,38 @@
 # uses
 
-Inspired by the interviews on [Uses This](https://usesthis.com), the following, which, by factor of writing them out here, helps with a sense of intention, represents the tools I use in a somewhat regular basis.
+Inspired by the interviews on [Uses This](https://usesthis.com), the following represents the tools I use in a somewhat regular basis.
 
 ## hardware
 
 ### computer
-- **Laptop:** Mid-2014 13-inch MacBook Pro
-- **Keyboard:** HHKB Professional HYBRID Type-S Wired
-- **Mouse:** Logitech Signature M650 L Full Size Wireless
-- **Laptop stand:** Yohann MacBook Stand Wood
+- Mid-2014 13-inch MacBook Pro
+- HHKB Professional HYBRID Type-S Wired Keyboard
+- Logitech Signature M650 L Full Size Wireless Mouse
+- Yohann MacBook Stand Wood
 
 ### miscellaneous
-- **Phone:** Light Phone II
-- **Headphones:** AKG K371 Wired
+- Light Phone II
+- AKG K371 Wired Headphones
 
 ## software
 
 ### desktop
-- **Password manager:** KeePassXC
-- **Text editor:** [Notepad Next](https://github.com/dail8859/NotepadNext)
-- **Terminal:** Terminal.app
-  - **Shell:** Bash
-  - **Version control system:** Git
-  - **Package manager:** Homebrew
-- **PDF viewer:** [Skim](https://skim-app.sourceforge.io/)
-- **Audio player:** [foobar2000](https://www.foobar2000.org/)
+- KeePassXC
+- [Nova](https://nova.app)
+- Terminal.app
+  - Bash
+  - Homebrew
+  - Git
+- Preview.app
 
 ### browser
-- **Browser:** LibreWolf
-  - **Search engine:** DuckDuckGo
-  - **Extensions:**
-    - **Password manager plugin:** KeePassXC-Browser
-    - **Content blocker:** uBlock Origin
-    - **WCAG accessibility evaluator:** [AInspector](https://addons.mozilla.org/en-GB/firefox/addon/ainspector-wcag/)
-    - **Keyboard shortcuts:** Vimium
-- **Code forge:** GitHub
-- **Document editor:** Typst
-- **Email and cloud storage:** Proton
+- [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium)
+  - [chromium-web-store](https://github.com/NeverDecaf/chromium-web-store)
+  - uBlock Origin
+  - Vimium
+  - KeePassXC-Browser
+  - [My Notes](https://github.com/penge/my-notes)
+  - [Block Site](https://github.com/penge/block-site)
+- GitHub
+- Typst
+- Proton

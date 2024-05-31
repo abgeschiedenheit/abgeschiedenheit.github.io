@@ -6,10 +6,12 @@
     <meta name="robots" content="noindex, noarchive">
     <title>introductory regex</title>
     <link rel="stylesheet" type="text/css" href="/style.css">
-    <link href="https://abgeschiedenheit.github.io/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for weblog" />
+    <link href="https://abgeschiedenheit.github.io/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for the weblog">
   </head>
   <header>
-    <nav><a href="/">index</a> | <a href="/about">about</a> | <a href="/uses">uses</a> | <a href="/resources">resources</a>
+    <nav>
+      <a href="/">index</a> (<a href="/atom.xml">atom</a>) – <a href="/resources">resources</a> 
+    </nav>
   </header>
   <main>
 <h1>introductory regex</h1>
@@ -57,6 +59,5 @@
 <p>The following asterisk operator in <code>e.*</code> requires similar thinking. For instance, why doesn't <code>e.+</code> suffice? Why does <code>/e.+e/.test('ee')</code> evaluate to <code>false</code>? On the other hand, why does <code>/e.*e/.test('ee')</code> evaluate to <code>true</code>? Well, the former requires at least one instance of seperation between <code>ee</code> to occur whereas the latter allows for zero instances of seperation between <code>ee</code> to occur. </p>
 <p>Above all, I'm looking forward to getting deeper into regex. They might be handy in some particular cases. I'm here instinctively thinking of using regex to mask my e-mail if it's listed on a public website. Who knows? While fun to work through, I'm able to foresee regular expressions becoming exceedingly complex.</p>
 <footer>
-	<small>No Rights Reserved (CC0).</small>
-	<small><a href="#">Back to the top of the page</a>.</small>
+	<p class="asterism">*</p>
 </footer>

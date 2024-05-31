@@ -21,14 +21,14 @@ index_html() {
 	$MARKDOWN index.md
 
 	echo "<ul>"
-
+	
 	# Posts
 	while read -r f title created; do
 		link=$(echo "$f" | gsed -E 's|.*/(.*).md|\1/|')
 		created=$(echo $(head -3 "$f" | tail -1))
-	 	echo "<li><span>$created</span>: <a href=\"$link\">$title</a></li>"
+	 	echo "<li><small><span>$created</span></small><br><a href=\"$link\">$title</a></li>"
 	done < "$1" | sort -r
-
+	
 	echo "</ul>"
 
 	# Print footer after post list
