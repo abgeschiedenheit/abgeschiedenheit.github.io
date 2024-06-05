@@ -1,38 +1,38 @@
 # uses
 
-Inspired by the interviews on [Uses This](https://usesthis.com), the following represents the tools I use in a somewhat regular basis.
-
 ## hardware
 
 ### computer
-- Mid-2014 13-inch MacBook Pro
-- HHKB Professional HYBRID Type-S Wired Keyboard
-- Logitech Signature M650 L Full Size Wireless Mouse
-- Yohann MacBook Stand Wood
+- **Laptop:** Mid-2014 13-inch MacBook Pro
+- **Keyboard:** HHKB Professional HYBRID Type-S Wired
+- **Mouse:** Logitech Signature M650 L Full Size Wireless
+- **Laptop stand:** Yohann MacBook Stand Wood
 
 ### miscellaneous
-- Light Phone II
-- AKG K371 Wired Headphones
+- **Phone:** Light Phone II
+- **Headphones:** AKG K371 Wired
 
 ## software
 
 ### desktop
-- KeePassXC
-- [Nova](https://nova.app)
-- Terminal.app
-  - Bash
-  - Homebrew
-  - Git
-- Preview.app
+- **Password manager:** KeePassXC
+- **Text editor:** [Nova](https://nova.app)
+- **Terminal:** Terminal.app
+  - **Shell:** Bash
+  - **Version control system:** Git
+  - **Package manager:** Homebrew
+- **PDF viewer:** Preview.app
+- **Markdown editor:** [Nota](https://nota.md)
 
 ### browser
-- [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium)
-  - [chromium-web-store](https://github.com/NeverDecaf/chromium-web-store)
-  - uBlock Origin
-  - Vimium
-  - KeePassXC-Browser
-  - [My Notes](https://github.com/penge/my-notes)
-  - [Block Site](https://github.com/penge/block-site)
-- GitHub
-- Typst
-- Proton
+- **Browser:** [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium)
+  - **Search engine:** Google
+  - **Extensions:**
+    - **Content blocker:** uBlock Origin
+    - **Keyboard shortcuts:** Vimium
+    - **Password manager plugin:** KeePassXC-Browser
+    - **Website blocker:** [Block Site](https://github.com/penge/block-site)
+    - **Memos client:** [My Notes](https://github.com/penge/my-notes)
+- **Code forge:** GitHub
+- **Document editor:** Typst
+- **Email and cloud storage:** Proton
