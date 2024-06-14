@@ -16,7 +16,7 @@
 
 ### desktop
 - **Password manager:** KeePassXC
-- **Text editor:** [Nova](https://nova.app)
+- **IDE:** [Cursor](https://cursor.sh)
 - **Terminal:** Terminal.app
   - **Shell:** Bash
   - **Version control system:** Git
@@ -28,11 +28,11 @@
 - **Browser:** [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium)
   - **Search engine:** Google
   - **Extensions:**
+    - **Extensions functionality:** [chromium-web-store](https://github.com/NeverDecaf/chromium-web-store)
     - **Content blocker:** uBlock Origin
-    - **Keyboard shortcuts:** Vimium
+    - **Keyboard shortcuts:** [Vimium](https://github.com/vimium/vimium)
     - **Password manager plugin:** KeePassXC-Browser
-    - **Website blocker:** [Block Site](https://github.com/penge/block-site)
-    - **Memos client:** [My Notes](https://github.com/penge/my-notes)
 - **Code forge:** GitHub
 - **Document editor:** Typst
 - **Email and cloud storage:** Proton
+- **Outliner:** Workflowy

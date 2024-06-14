@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>www testimonia</title>
 	<link href="https://abgeschiedenheit.github.io/atom.xml" rel="self" />
-	<updated>2024-06-05T05:40:20Z</updated>
+	<updated>2024-06-14T15:44:10Z</updated>
 	<author>
 		<name>abgeschiedenheit</name>
 	</author>
-	<id>https://abgeschiedenheit.github.io,2024-06-05:default-atom-feed/</id>
+	<id>https://abgeschiedenheit.github.io,2024-06-14:default-atom-feed/</id>
 	<entry>
 		<title>xml-based library</title>
 		<content type="html">&lt;h1&gt;xml-based library&lt;/h1&gt;

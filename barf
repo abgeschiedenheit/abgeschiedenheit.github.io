@@ -31,6 +31,7 @@ index_html() {
 	
 	echo "</ul>"
 
+	echo "</main>"  # Close the main tag for the index page
 	# Print footer after post list
 	cat footer.html
 }
@@ -82,10 +83,9 @@ write_page() {
 	created=$(echo $(head -3 "$filename" | tail -1))
 	title=$2
 
-	$MARKDOWN "$filename" | \
-		cat header.html - |\
-		gsed "s|{{TITLE}}|$title|" \
-		> "$target" && cat footer.html >> "$target"
+	$MARKDOWN "$filename" | cat header.html - | gsed "s|{{TITLE}}|$title|" > "$target"
+	echo "</main>" >> "$target"  # Close the main tag for all pages
+	cat footer.html >> "$target"  # Append the footer
 }
 
 rm -rf build && mkdir build
