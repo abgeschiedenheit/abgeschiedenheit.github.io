@@ -52,11 +52,11 @@
 }
 
 body {
-  background-color: #800080;
-  color: #f9f9f9;
+  background-color: snow;
   font-family: "eb", serif;
   font-size: 130%;
   line-height: 1.5;
+  letter-spacing: 0.6px;
   word-spacing: 8px;
   margin: 0;
 }
@@ -64,17 +64,17 @@ body {
 nav {
   position: absolute; /* Position fixed to make it stay at the top */
   top: 0; /* Align to the top */
-  background-color: #800080cf;
+  background-color: #eee;
   padding: 10px 40px;
-  border-bottom: 2px solid #91f5a6;
+  border-bottom: 2px solid #ddd;
   width: 100%;
 }
 
 footer {
   position: absolute;
   padding: 10px 40px;
-  background-color: #800080cf;
-  border-top: 2px solid #91f5a6;
+  background-color: #eee;
+  border-top: 2px solid #ddd;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -84,14 +84,14 @@ footer {
 main {
   max-width: 82ch;
   padding: 2rem;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 h1, h2, h3, h4 {
   font-family: "eb-sc", serif;
   font-weight: normal;
   text-transform: lowercase;
-  border-bottom: 2px solid #91f5a6;
+  border-bottom: 2px dotted #ddd;
 }
 
 /* h1 + p {
@@ -100,30 +100,19 @@ h1, h2, h3, h4 {
 
 a:link {
   padding: 1px 2px;
-  color: #91f5a6;
-}
-
-a:hover {
-  color: #91f5a6;
-}
-
-a:visited {
-  color: #91f5a6;
 }
 
 a[href*="//"]::after {
-  color: #91f5a6;
   font-size: 80%;
   content: "\2192";
 }
 
 a:active {
-  color: #91f5a6;
   outline: 2px solid;
 }
 
 img {
-  border: 2px solid #91f5a6;;
+  border: 2px solid #000;;
   max-width: 100%;
   min-height: 4em;
   height: auto;
@@ -143,13 +132,13 @@ img:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #008000;
+  background: #eee;
 }
 
 blockquote {
   padding: 0 1rem;
-  border-left: 4px solid #91f5a6;;
-  background-color: #008000;
+  border-left: 4px solid #ddd;
+  background-color: #eee;
 }
 
 abbr {
@@ -165,12 +154,12 @@ samp {
 }
 
 kbd {
-  border-bottom: 3px solid #91f5a6;
+  border-bottom: 3px solid #ddd;
 }
 
 code {
-  border: 1.4px solid #91f5a6;
-  background-color: #008000;
+  background-color: #eee;
+  border: 1.4px solid #ddd;
   border-radius: 4px;
   padding: 0 4px;
 }
@@ -179,8 +168,7 @@ pre {
   padding: .25rem 1rem;
   max-width: 100%;
   overflow: auto;
-  background-color: #008000;
-  border: 2px solid #91f5a6;
+  background-color: #eee;
 }
 
 pre code {
@@ -212,18 +200,18 @@ figcaption {
 
 small,
 span {
-  color: #dfdfdf;
+  color: #4F4F4F;
 }
 
 small a:link {
-  color: #dfdfdf;
+  color: #4F4F4F;
 }
 
 small a:visited {
-  color: #dfdfdf;
+  color: #4F4F4F;
 }
 
 small a:active {
-  color: #dfdfdf;
-  outline: 2px solid #dfdfdf;
+  color: #4F4F4F;
+  outline: 2px solid #4F4F4F;
 }
