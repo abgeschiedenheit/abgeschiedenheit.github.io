@@ -52,63 +52,80 @@
 }
 
 body {
-  background-color: snow;
-  font-family: "eb", serif;
-  font-size: 130%;
+  background-color: #5e155e;
+  color: #f5fffa;
+  /* font-family: "eb", serif; */
+  font-family: sans-serif;
   line-height: 1.5;
-  letter-spacing: 0.6px;
-  word-spacing: 8px;
   margin: 0;
 }
 
 nav {
   position: absolute; /* Position fixed to make it stay at the top */
   top: 0; /* Align to the top */
-  background-color: #eee;
   padding: 10px 40px;
-  border-bottom: 2px solid #ddd;
+  background-color: #663466;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 footer {
   position: absolute;
-  padding: 10px 40px;
-  background-color: #eee;
-  border-top: 2px solid #ddd;
+  padding: 10px;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  text-align: center;
 }
 
 main {
-  max-width: 82ch;
+  max-width: 88ch;
   padding: 2rem;
   margin: 2rem auto;
 }
 
-h1, h2, h3, h4 {
-  font-family: "eb-sc", serif;
-  font-weight: normal;
-  text-transform: lowercase;
-  border-bottom: 2px dotted #ddd;
+h1 {
+  font-size: 120%;
 }
 
-/* h1 + p {
-  color: #dfdfdf;
-} */
+h2 {
+  font-size: 110%;
+}
+
+h3 {
+  font-size: 105%;
+}
+
+h1, h2, h3, h4 {
+  /* font-family: "eb-sc", serif;
+  font-weight: normal;
+  text-transform: lowercase; */
+  font-family: sans-serif;
+  text-decoration: underline;
+}
 
 a:link {
+  color: #00f980;
   padding: 1px 2px;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #00f980;
+}
+
+a:hover {
+  color: #00f980;
+  text-decoration: underline;
 }
 
 a[href*="//"]::after {
-  font-size: 80%;
-  content: "\2192";
+  color: #f5fffa;
+  font-size: 86%;
+  content: "\2197";
 }
 
 a:active {
-  outline: 2px solid;
+  outline: 2px dotted #00f980;
 }
 
 img {
@@ -132,13 +149,13 @@ img:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #eee;
+  background: #663466;
 }
 
 blockquote {
   padding: 0 1rem;
-  border-left: 4px solid #ddd;
-  background-color: #eee;
+  border-left: 5px solid #954e95;
+  background-color: #663466;
 }
 
 abbr {
@@ -149,17 +166,17 @@ code,
 pre,
 kbd,
 samp {
-  font-family: 'cmu', monospace;
-  font-size: 90%;
+  font-family: 'courier', monospace;
+  font-size: 98%;
 }
 
 kbd {
-  border-bottom: 3px solid #ddd;
+  border-bottom: 3px solid #954e95;
 }
 
 code {
-  background-color: #eee;
-  border: 1.4px solid #ddd;
+  background: #663466;
+  border: 1px solid #954e95;
   border-radius: 4px;
   padding: 0 4px;
 }
@@ -168,7 +185,7 @@ pre {
   padding: .25rem 1rem;
   max-width: 100%;
   overflow: auto;
-  background-color: #eee;
+  background-color: #663466;
 }
 
 pre code {
@@ -200,18 +217,18 @@ figcaption {
 
 small,
 span {
-  color: #4F4F4F;
+  color: #C7C7C7;
 }
 
 small a:link {
-  color: #4F4F4F;
+  color: #C7C7C7;
 }
 
 small a:visited {
-  color: #4F4F4F;
+  color: #C7C7C7;
 }
 
 small a:active {
-  color: #4F4F4F;
-  outline: 2px solid #4F4F4F;
+  color: #C7C7C7;
+  outline: 2px solid #C7C7C7;
 }

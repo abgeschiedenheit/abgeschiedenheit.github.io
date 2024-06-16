@@ -31,9 +31,9 @@ index_html() {
 	
 	echo "</ul>"
 
-	echo "</main>"  # Close the main tag for the index page
+	# echo "</main>"  # Close the main tag for the index page
 	# Print footer after post list
-	cat footer.html
+	# cat footer.html
 }
 
 atom_xml() {
