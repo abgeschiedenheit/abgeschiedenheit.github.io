@@ -1,52 +1,3 @@
-@font-face {
-  font-family: "cmu";
-  src: url("public/cmu.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "cmu";
-  src: url("public/cmu-italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "cmu";
-  src: url("public/cmu-bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "cmu";
-  src: url("public/cmu-bold-italic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "eb";
-  src: url("public/eb.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "eb";
-  src: url("public/eb-italic.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "eb-sc";
-  src: url("public/eb-sc.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -54,7 +5,6 @@
 body {
   background-color: #5e155e;
   color: #f5fffa;
-  /* font-family: "eb", serif; */
   font-family: sans-serif;
   line-height: 1.5;
   margin: 0;
@@ -67,6 +17,7 @@ nav {
   background-color: #663466;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -105,7 +56,6 @@ h1, h2, h3, h4 {
 
 a:link {
   color: #00f980;
-  padding: 1px 2px;
   text-decoration: none;
 }
 
@@ -119,8 +69,7 @@ a:hover {
 }
 
 a[href*="//"]::after {
-  color: #f5fffa;
-  font-size: 86%;
+  font-size: 80%;
   content: "\2197";
 }
 

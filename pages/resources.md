@@ -1,84 +1,22 @@
 # resources
 
-## development
-
-- [W3C Validators and tools](https://www.w3.org/developers/tools/)
-> Lead your code to its full potential with great and open source tools.
-
-- [DevTools Tips](https://devtoolstips.org/)
-> If you're a web developer, DevTools Tips is for you! Whatever your level of experience, and whatever browser you prefer using for web development, use DevTools Tips to learn new tips and tricks on a regular basis.
-
-## design (incl. accessibility)
-
-- [Utopia: Fluid Responsive Design](https://utopia.fyi/)
-> Utopia emerges when designers and developers share a systematic approach to fluidity in responsive design. Instead of designing for x number of arbitrary breakpoints, we can design a system within which elements scale proportionally and fluidly.
-
-### typography
-
-<!-- - [The League of Moveable Type](https://www.theleagueofmoveabletype.com/)
-> The original, the first, the open-source font foundry. -->
-
-- [Velvetyne](https://velvetyne.fr)
-> Velvetyne is an association and collective dedicated to researching and disseminating typography and typeface creation. Our efforts manifest through collective creation workshops, public engagements, and the promotion of open, playful tools that embrace an uninhibited approach to typography. Our editorial practice revolves around building a politically and artistically supported typographic universe, collaborating with diverse and engaged authors. Together, we give life to fonts and graphical objects under open licenses, allowing for their use, modification, and redistribution. Additionally, we explore unconventional paths, fostering transparency and inclusivity to make typeface creation more open and dynamic.
-
-- [Use & Modify](https://usemodify.com/)
-> This is a personal selection of beautiful, classy, punk, professional, incomplete, weird typefaces. Open source licenses make them free to use and modify. This selection is the result of deep search and crushes.
-
-- [Tunera Type Foundry](https://www.tunera.xyz/)
-> Tunera is a transnational type foundry, that aims to present new and original typefaces for everyone. Tunera Type Foundry got its name from the Indian fig cactus, called “tunera” in Spanish, because it offers sharp font picks, rich curves and lots of flavor.
-
-- [Wakamai Fondue](https://wakamaifondue.com/)
-> Wakamai Fondue is a tool that answers the question “What can my font do?”
-
-<!-- ### color -->
-
-<!-- - [Color & Contrast](https://colorandcontrast.com/)
-> A comprehensive guide for exploring and learning about the theory, science, and perception of color and contrast. -->
-
-<!-- - [WCAG Contrast Checker](https://contrastchecker.com/)
-> This tool is built for designers and developers to test color contrast compliance with the [Web Content Accessibility Guidelines](https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast) (WCAG) as set forth by the World Wide Web Consortium (W3C). These calculations are based on the [formulas specified by the W3C](https://www.w3.org/TR/AERT#color-contrast). -->
-
-<!-- - [Random A11y](https://randoma11y.com/)
-> Vote on random a11y color combinations  -->
-
-### accessibility
-
-- [The WCAG Explained](https://www.getstark.co/wcag-explained/)
-> Simplified and actionable explanations of every WCAG 2.2 criteria
-
-- [WebAIM](https://webaim.org)
-> Expanding the potential of the web for people with disabilities by empowering individuals and organizations to create accessible content.
-
-- [The Centre for Excellence in Universal Design (CEUD)](https://universaldesign.ie)
-> The Centre for Excellence in Universal Design (CEUD) is dedicated to enabling the design of environments that can be accessed, understood and used regardless of a person's age, size, ability or disability. We are a part of the National Disability Authority.
-
-- [CAST](https://www.cast.org/)
-> CAST is a multifaceted organization with a singular ambition: Bust the barriers to learning that millions of people experience every day. We do this by helping educators and organizations apply insights from the learning sciences and leading-edge practices to educational design and implementation.
-
-- [Exclusive Design](https://exclusive-design.vasilis.nl/)
-> *What if we design websites exclusively for people with disabilities?*
-
-<!-- - [A11y Coffee](https://a11y.coffee/)
-> Pick your serving size of web accessibility information -->
-
-<!-- - [a11y Collective](https://www.a11y-collective.com/)
-> Whether you’re a designer, developer, product owner, webmaster or content creator, you have the power to make impact. Just enroll in our courses. Learn at home or on the go and always at your own pace. -->
-
-### reference
-
-- [Radical web design](https://radicalweb.design/en)
-> Web design can be [open](https://radicalweb.design/en/themes/open), [accessible](https://radicalweb.design/en/themes/accessible), [boring](https://radicalweb.design/en/themes/boring), [resilient](https://radicalweb.design/en/themes/resilient), [subverise](https://radicalweb.design/en/themes/subversive), [exciting](https://radicalweb.design/en/themes/exciting), [weird](https://radicalweb.design/en/themes/weird), [inclusive](https://radicalweb.design/en/themes/inclusive), [brutal](https://radicalweb.design/en/themes/brutal), [tinkered](https://radicalweb.design/en/themes/tinkered), [primitive](https://radicalweb.design/en/themes/primitive), [sober](https://radicalweb.design/en/themes/sober), [handcoded](https://radicalweb.design/en/themes/handcoded), [sensible](https://radicalweb.design/en/themes/sensible), [progressive](https://radicalweb.design/en/themes/progressive), [fluid](https://radicalweb.design/en/themes/fluid), [suggestive](https://radicalweb.design/en/themes/suggestive), [performant](https://radicalweb.design/en/themes/performant), [future-proof](https://radicalweb.design/en/themes/future-proof), [independant](https://radicalweb.design/en/themes/independant), [radical](https://radicalweb.design/en/themes/radical), [useful](https://radicalweb.design/en/themes/utile)
-
-## general
-
 - [Internet Archive](https://archive.org/)
 > Internet Archive is a non-profit digital library offering millions of free books, movies & audio files, plus billions of saved web pages in the Wayback Machine.
+
+- [Open Library](https://openlibrary.org/)
+> Open Library is an open, editable library catalog, building towards a web page for every book ever published. 
 
 - [Anna's Archive](https://annas-archive.org)
 > Anna’s Archive is a non-profit, open-source search engine for "[shadow libraries](https://en.wikipedia.org/wiki/Shadow_library)". It was created by [Anna](https://annas-blog.org/), who felt that there was a need for a central place to search for books, papers, comics, magazines, and other documents.
 
 - [Monoskop](https://monoskop.org/)
-> Monoskop is an independent web-based educational resource and research platform for arts, culture and humanities founded in 2004. Monoskop features wiki pages with multilingual genealogical bibliographies of contemporary themes and movements in art, culture, and society such as [Fediverse](https://monoskop.org/Fediverse), [technofeminism](https://monoskop.org/Technofeminism), [decolonial aesthetics](https://monoskop.org/Decolonial_aesthetics), the [Anthropocene](https://monoskop.org/Anthropocene), [community radio](https://monoskop.org/Community_radio), [free software](https://monoskop.org/Free_software), [artists' publishing](https://monoskop.org/Artists%27_publishing), [performance](https://monoskop.org/Performance), [sound art](https://monoskop.org/Sound_art) and [experimental film and video](https://monoskop.org/Experimental_film), accompanied by personal bio-bibliographical profiles of their exponents. Many of the titles in the bibliographies are linked to electronic versions of publications made available on Monoskop or other [free/libre libraries](https://monoskop.org/Shadow_libraries). (2023)
+> Monoskop is an independent web-based educational resource and research platform for arts, culture and humanities founded in 2004. Monoskop features wiki pages with multilingual genealogical bibliographies of contemporary themes and movements in art, culture, and society such as [Fediverse](https://monoskop.org/Fediverse), [technofeminism](https://monoskop.org/Technofeminism), [decolonial aesthetics](https://monoskop.org/Decolonial_aesthetics), the [Anthropocene](https://monoskop.org/Anthropocene), [community radio](https://monoskop.org/Community_radio), [free software](https://monoskop.org/Free_software), [artists' publishing](https://monoskop.org/Artists%27_publishing), [performance](https://monoskop.org/Performance), [sound art](https://monoskop.org/Sound_art) and [experimental film and video](https://monoskop.org/Experimental_film), accompanied by personal bio-bibliographical profiles of their exponents. Many of the titles in the bibliographies are linked to electronic versions of publications made available on Monoskop or other [free/libre libraries](https://monoskop.org/Shadow_libraries).
 
 - [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/index.html)
-> The Stanford Encyclopedia of Philosophy organizes scholars from around the world in philosophy and related disciplines to create and maintain an up-to-date reference work.
+> The Stanford Encyclopedia of Philosophy (SEP) organizes scholars from around the world in philosophy and related disciplines to create and maintain an up-to-date reference work.
+
+- [DeepL Translate](https://www.deepl.com/)
+> Translate texts & full document files instantly. Accurate translations for individuals and Teams. Millions translate with DeepL every day.
+
+- [Etymonline](https://www.etymonline.com/)
+> This is a map of the wheel-ruts of modern English. Etymologies are not definitions; they're explanations of what our words meant and how they sounded 600 or 2,000 years ago.
