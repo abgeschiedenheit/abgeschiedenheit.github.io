@@ -3,7 +3,7 @@
 ## locally
 
 - [art](/art): search the Harvard Arts Mueseums
-- [jot](jot): take down memos
+- [jot](/jot): take down memos
 - [square](/square): see _Homage to the Square_ emulations 
 - [music](/music): listen to personally-selected music
 
