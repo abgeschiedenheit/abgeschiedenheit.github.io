@@ -41,22 +41,15 @@
 }
 
 @font-face {
-  font-family: "trib";
-  src: url("public/trib_regular.woff2") format("woff2");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "trib";
-  src: url("public/trib_italic.woff2") format("woff2");
-  font-style: italic;
-  font-weight: normal;
-}
-
-@font-face {
   font-family: "intel";
   src: url("public/intel_regular.woff2") format("woff2");
+  font-style: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ltr";
+  src: url("public/ltr.woff2") format("woff2");
   font-style: normal;
   font-style: normal;
 }
@@ -92,8 +85,9 @@ a:hover {
 }
 
 a[href*="//"]::after {
+  font-family: "ltr", serif;
   font-size: 80%;
-  content: "\2197";
+  content: "\2192";
 }
 
 a:active {
@@ -112,8 +106,7 @@ h4 {
 }
 
 img {
-  margin: 0 auto;
-  border: 2px solid #000;
+  border: 3px solid #000;
   max-width: 100%;
   min-height: 4em;
   height: auto;
@@ -186,7 +179,6 @@ code pre {
 }
 
 figcaption {
-  text-align: center;
   color: #BABABA;
 }
 

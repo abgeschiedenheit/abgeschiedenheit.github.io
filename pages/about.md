@@ -3,7 +3,7 @@
 ## about the author
 
 <figure>
-	<img src="/public/self.jpeg" alt="Backpacking in Kings Canyon National Park (September 2019)" width="160">
+	<img src="/public/dither_it_self.jpeg" alt="Backpacking in Kings Canyon National Park (September 2019)" width="165">
 	<figcaption>
 		<small>Kings Canyon National Park</small>
 	</figcaption>
