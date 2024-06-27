@@ -1,46 +1,4 @@
 @font-face {
-  font-family: "mediaeval";
-  src: url("public/Mediaeval.otf") format("opentype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "mediaeval";
-  src: url("public/MediaevalItalic.otf") format("opentype");
-  font-style: italic;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "mediaeval";
-  src: url("public/MediaevalBold.otf") format("opentype");
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "mediaeval";
-  src: url("public/MediaevalBoldItalic.otf") format("opentype");
-  font-style: italic;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "mediaeval sc";
-  src: url("public/MediaevalSC+OSFBold.otf") format("opentype");
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "mediaeval sc";
-  src: url("public/MediaevalSC+OSFBoldItalic.otf") format("opentype");
-  font-style: italic;
-  font-weight: bold;
-}
-
-@font-face {
   font-family: "intel";
   src: url("public/intel_regular.woff2") format("woff2");
   font-style: normal;
@@ -52,6 +10,41 @@
   src: url("public/ltr.woff2") format("woff2");
   font-style: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Libcziowes";
+  src: url("public/Libcziowes-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "mediaeval";
+  src: url("public/Mediaeval-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "mediaeval";
+  src: url("public/Mediaeval-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "mediaeval";
+  src: url("public/Mediaeval-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "mediaeval";
+  src: url("public/Mediaeval-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
 }
 
 * {
@@ -66,9 +59,44 @@ body {
   font-family: "mediaeval", serif;
   line-height: 2;
   margin: 0 auto;
-  max-width: 650px;
-  padding: 2rem;
+  max-width: 800px;
+  padding: 0 2rem;
   word-spacing: 0.6rem;
+}
+
+header {
+  text-align: center;
+  top: 0;
+  position: static;
+  font-size: small;
+  background-color: #0d2600;
+  border-bottom: 4px solid #0b2000;
+  border-left: 2px solid #0b2000;
+  border-right: 2px solid #0b2000;
+}
+
+nav {
+  padding: 5px 20px;
+}
+
+nav a:link {
+  color: #fdf5e6;
+  text-decoration: none;
+  padding: 2px;
+}
+
+nav a:visited {
+  color: #fdf5e6;
+}
+
+nav a:hover {
+  color: #fdf5e6;
+  text-decoration: underline;
+}
+
+nav a:active {
+  color: #fdf5e6;
+  outline: 1px solid #fdf5e6;
 }
 
 a:link {
@@ -98,11 +126,24 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "mediaeval sc", serif;
-  font-weight: normal;
   line-height: 1.3;
-  border-bottom: 1px solid #beb4ff;
   font-variant: small-caps;
+}
+
+h1 {
+  font-size: 140%;
+}
+
+h2 {
+  font-size: 120%;
+}
+
+h3 {
+  font-size: 105%;
+}
+
+main {
+  margin-top: 2rem;
 }
 
 img {
@@ -190,6 +231,7 @@ small, .date {
 footer {
   text-align: center;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   line-height: 1.2;
 }
 

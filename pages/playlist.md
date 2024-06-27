@@ -1,6 +1,8 @@
-# reading
+# playlist
 
 ## summer '24
+
+### literature
 
 <ul>
 <li><strong>Loy, Mina:</strong> <span class="book-title"><em>The Lost Lunar Baedecker: Poems</em><span class="tooltip">(Farrar, Straus and Giroux, 1996)</span></span></li>
@@ -11,7 +13,11 @@
 <li><strong>James, William:</strong> <span class="book-title"><em>Varieties of Religious Experience: A Study in Human Nature</em><span class="tooltip">(Routledge, 2002)</span></span></li>
 </ul>
 
-**Note:** See publisher and published date by hovering over the title.
+### film
+
+<ul>
+<li><strong>Dreyer, Carl Theodor:</strong> <span class="book-title"><em>Gertrud</em><span class="tooltip">(Criterion, 1966)</span></span></li>
+</ul>
 
 <style>
 .book-title {

@@ -1,7 +1,5 @@
 # uses
 
-Inspired by the interviews on [Uses This](https://usesthis.com), the following, which, by factor of writing them out here, helps with a sense of intention, represents the tools I use in a somewhat regular basis.
-
 ## hardware
 
 ### computer
@@ -24,7 +22,7 @@ Inspired by the interviews on [Uses This](https://usesthis.com), the following, 
   - **Shell:** Bash
   - **Version control system:** Git
 - **PDF reader:** Preview.app
-- **Music player:** Doppler
+- **Music player:** foobar2000
 
 ### browser
 - **Browser:** Orion
