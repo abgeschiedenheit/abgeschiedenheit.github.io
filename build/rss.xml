@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-	<title>weblog</title>
-	<link href="https://barf.btxx.org/atom.xml" rel="self" />
-	<updated>2024-06-29T00:01:14Z</updated>
-	<author>
-		<name>abgeschiedenheit</name>
-	</author>
-	<id>https://barf.btxx.org,2024-03-15:default-atom-feed/</id>
-	<entry>
-		<title>xml-based library</title>
-		<content type="html">&lt;h1 id=&quot;xml-based-library&quot;&gt;xml-based library&lt;/h1&gt;
+<rss version="2.0">
+	<channel>
+		<title>weblog</title>
+		<link>https://barf.btxx.org/rss.xml</link>
+		<description>Feed description here</description>
+		<lastBuildDate>Sat, 29 Jun 2024 07:01:14 +0000</lastBuildDate>
+		<pubDate>Sat, 29 Jun 2024 07:01:14 +0000</pubDate>
+		<generator>Custom RSS Generator</generator>
+		<ttl>1800</ttl>
+		<item>
+			<title>xml-based library</title>
+			<description>&lt;h1 id=&quot;xml-based-library&quot;&gt;xml-based library&lt;/h1&gt;
 &lt;p&gt;2023-11-16&lt;/p&gt;
 &lt;p&gt;Having never seriously used XML, I decided to build a library page, a list of some of my favorite creative works in a table format, with it. The source of the library page is an XML document, albeit, a fairly simple one at the moment:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;#60;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;#62;
@@ -70,15 +71,14 @@
 &lt;p&gt;At the root of my website, I run:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;xsltproc -o .&amp;#47;pages&amp;#47;library.md  library.xslt library.xml
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This applies the XSLT file to the XML file and through XSLT converts it to HTML. The output file is placed right in my pages folder where it gets rendered not only as a proper document but also according to my already defined stylesheet. I leave the output file, the HTML document, untouched. Note: Markdown automatically converts HTML to Markdown.&lt;/p&gt;</content>
-		<link href="https://barf.btxx.org/xml-based-reading-log"/>
-		<id>https://barf.btxx.org/xml-based-reading-log</id>
-		<updated>2023-11-16T10:00:00Z</updated>
-		<published>2023-11-16T10:00:00Z</published>
-	</entry>
-	<entry>
-		<title>the cost of modern web development</title>
-		<content type="html">&lt;h1 id=&quot;the-cost-of-modern-web-development&quot;&gt;the cost of modern web development&lt;/h1&gt;
+&lt;p&gt;This applies the XSLT file to the XML file and through XSLT converts it to HTML. The output file is placed right in my pages folder where it gets rendered not only as a proper document but also according to my already defined stylesheet. I leave the output file, the HTML document, untouched. Note: Markdown automatically converts HTML to Markdown.&lt;/p&gt;</description>
+			<link>https://barf.btxx.org/xml-based-reading-log</link>
+			<guid isPermaLink="false">https://barf.btxx.org/xml-based-reading-log</guid>
+			<pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<title>the cost of modern web development</title>
+			<description>&lt;h1 id=&quot;the-cost-of-modern-web-development&quot;&gt;the cost of modern web development&lt;/h1&gt;
 &lt;p&gt;2023-10-17&lt;/p&gt;
 &lt;p&gt;The other night, I was uninstalling unnecessary packages I had installed with &lt;code&gt;brew&lt;/code&gt; and realized there were far too many to account for. Instead of going through each package in &lt;code&gt;brew list&lt;/code&gt; and looking up its respective purpose, I decided to purge the entire formulae:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;brew remove --force $(brew list --formula)
@@ -90,15 +90,14 @@
 &lt;li&gt;&lt;code&gt;node&lt;/code&gt;&amp;#8217;s dependencies account for another ~242MB.&lt;/li&gt;
 &lt;li&gt;Furthermore, take into account, for a given project, the &lt;code&gt;node_modules&lt;/code&gt; folder and all the &lt;code&gt;&quot;dependencies&quot;&lt;/code&gt; and &lt;code&gt;&quot;devDependencies&quot;&lt;/code&gt;, and their dependencies, ad infinitum.&lt;/li&gt;
 &lt;li&gt;Regardless of the latter ending up in a &lt;code&gt;.gitignore&lt;/code&gt;, the memory requirements of modern web development is seemingly complex.&lt;/li&gt;
-&lt;/ul&gt;</content>
-		<link href="https://barf.btxx.org/the-cost-of-modern-webdev"/>
-		<id>https://barf.btxx.org/the-cost-of-modern-webdev</id>
-		<updated>2023-10-17T10:00:00Z</updated>
-		<published>2023-10-17T10:00:00Z</published>
-	</entry>
-	<entry>
-		<title>introductory regex</title>
-		<content type="html">&lt;h1 id=&quot;introductory-regex&quot;&gt;introductory regex&lt;/h1&gt;
+&lt;/ul&gt;</description>
+			<link>https://barf.btxx.org/the-cost-of-modern-webdev</link>
+			<guid isPermaLink="false">https://barf.btxx.org/the-cost-of-modern-webdev</guid>
+			<pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<title>introductory regex</title>
+			<description>&lt;h1 id=&quot;introductory-regex&quot;&gt;introductory regex&lt;/h1&gt;
 &lt;p&gt;2024-02-26&lt;/p&gt;
 &lt;p&gt;I have been playing with regular expressions (regex, in short) lately:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -129,25 +128,23 @@
 &lt;p&gt;And so, we are at our conclusion: the answer to the problem above is &lt;code&gt;var re = &amp;#47;^e.*e$&amp;#47;&lt;/code&gt;. But why is that? I get the beginning and the end but the meat of it is slightly confusing.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;e.&lt;/code&gt; follows the instructions of seperation, that the &lt;code&gt;e&lt;/code&gt; beginning character must be seperated from the &lt;code&gt;e&lt;/code&gt; ending character. This is logical. Using the &lt;code&gt;node&lt;/code&gt; REPL, &lt;code&gt;&amp;#47;e.&amp;#47;.test(&amp;#39;e&amp;#39;)&lt;/code&gt; turns out to be &lt;code&gt;false&lt;/code&gt;. The wildcard metacharacter is indicating another character must follow the character &lt;code&gt;e&lt;/code&gt; for there to be a match.&lt;/p&gt;
 &lt;p&gt;The following asterisk operator in &lt;code&gt;e.*&lt;/code&gt; requires similar thinking. For instance, why doesn&amp;#8217;t &lt;code&gt;e.+&lt;/code&gt; suffice? Why does &lt;code&gt;&amp;#47;e.+e&amp;#47;.test(&amp;#39;ee&amp;#39;)&lt;/code&gt; evaluate to &lt;code&gt;false&lt;/code&gt;? On the other hand, why does &lt;code&gt;&amp;#47;e.*e&amp;#47;.test(&amp;#39;ee&amp;#39;)&lt;/code&gt; evaluate to &lt;code&gt;true&lt;/code&gt;? Well, the former requires at least one instance of seperation between &lt;code&gt;ee&lt;/code&gt; to occur whereas the latter allows for zero instances of seperation between &lt;code&gt;ee&lt;/code&gt; to occur. &lt;/p&gt;
-&lt;p&gt;Above all, I&amp;#8217;m looking forward to getting deeper into regex. They might be handy in some particular cases. I&amp;#8217;m here instinctively thinking of using regex to mask my e-mail if it&amp;#8217;s listed on a public website. Who knows? While fun to work through, I&amp;#8217;m able to foresee regular expressions becoming exceedingly complex.&lt;/p&gt;</content>
-		<link href="https://barf.btxx.org/introductory-regex-problem"/>
-		<id>https://barf.btxx.org/introductory-regex-problem</id>
-		<updated>2024-02-26T10:00:00Z</updated>
-		<published>2024-02-26T10:00:00Z</published>
-	</entry>
-	<entry>
-		<title>interaction-heavy, information-weak</title>
-		<content type="html">&lt;h1 id=&quot;interaction-heavy-information-weak&quot;&gt;interaction-heavy, information-weak&lt;/h1&gt;
+&lt;p&gt;Above all, I&amp;#8217;m looking forward to getting deeper into regex. They might be handy in some particular cases. I&amp;#8217;m here instinctively thinking of using regex to mask my e-mail if it&amp;#8217;s listed on a public website. Who knows? While fun to work through, I&amp;#8217;m able to foresee regular expressions becoming exceedingly complex.&lt;/p&gt;</description>
+			<link>https://barf.btxx.org/introductory-regex-problem</link>
+			<guid isPermaLink="false">https://barf.btxx.org/introductory-regex-problem</guid>
+			<pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<title>interaction-heavy, information-weak</title>
+			<description>&lt;h1 id=&quot;interaction-heavy-information-weak&quot;&gt;interaction-heavy, information-weak&lt;/h1&gt;
 &lt;p&gt;2023-12-11&lt;/p&gt;
-&lt;p&gt;What makes accessibility difficult is the thin-line it operates in so as not to fall under this all too common software curse of being interaction-heavy but information-weak. The high degree of criticality in accessibility often means the user&amp;#8217;s intention lies outside interactivity. As for the rest, interaction must be enjoyable and educational lest our design fails in the domain of information software.&lt;/p&gt;</content>
-		<link href="https://barf.btxx.org/interaction-heavy-information-weak"/>
-		<id>https://barf.btxx.org/interaction-heavy-information-weak</id>
-		<updated>2023-12-11T10:00:00Z</updated>
-		<published>2023-12-11T10:00:00Z</published>
-	</entry>
-	<entry>
-		<title>from latex to typst</title>
-		<content type="html">&lt;h1 id=&quot;from-latex-to-typst&quot;&gt;from latex to typst&lt;/h1&gt;
+&lt;p&gt;What makes accessibility difficult is the thin-line it operates in so as not to fall under this all too common software curse of being interaction-heavy but information-weak. The high degree of criticality in accessibility often means the user&amp;#8217;s intention lies outside interactivity. As for the rest, interaction must be enjoyable and educational lest our design fails in the domain of information software.&lt;/p&gt;</description>
+			<link>https://barf.btxx.org/interaction-heavy-information-weak</link>
+			<guid isPermaLink="false">https://barf.btxx.org/interaction-heavy-information-weak</guid>
+			<pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<title>from latex to typst</title>
+			<description>&lt;h1 id=&quot;from-latex-to-typst&quot;&gt;from latex to typst&lt;/h1&gt;
 &lt;p&gt;2023-11-13&lt;/p&gt;
 &lt;p&gt;For as long as I remember, I&amp;#8217;ve been using LaTeX, the typesetting system, for updating my résumé. My editor of choice was, not the web-based editor &lt;a href=&quot;https://www.overleaf.com/&quot;&gt;Overleaf&lt;/a&gt;, but rather, &lt;a href=&quot;https://pages.uoregon.edu/koch/&quot;&gt;Richard Koch&amp;#8217;s&lt;/a&gt; &lt;a href=&quot;https://pages.uoregon.edu/koch/texshop/&quot;&gt;TeXShop&lt;/a&gt;–initially released in 2000.&lt;/p&gt;
 &lt;p&gt;It was always fun and interesting looking up solutions on the &lt;a href=&quot;https://tex.stackexchange.com/&quot;&gt;TeX Stack Exchange&lt;/a&gt; for things I wanted to do but would quickly run into a wall trying to do. I mean, there is seemingly a high amount of material relating to TeX on the web that one is bound to find a solution to their problem eventually. And anyways, there is &lt;a href=&quot;https://www.ctan.org/&quot;&gt;CTAN&lt;/a&gt;:&lt;/p&gt;
@@ -162,15 +159,14 @@
   smallcaps(it)
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Above all, shall we say: The safest general characterization of the typesetting system tradition is that it consists of a series of footnotes to TeX? For now, I&amp;#8217;m using Typst exclusively. Although, given how new it is, I wouldn&amp;#8217;t be surprised in significant shortcomings.&lt;/p&gt;</content>
-		<link href="https://barf.btxx.org/from-latex-to-typst"/>
-		<id>https://barf.btxx.org/from-latex-to-typst</id>
-		<updated>2023-11-13T10:00:00Z</updated>
-		<published>2023-11-13T10:00:00Z</published>
-	</entry>
-	<entry>
-		<title>accessible images: :after</title>
-		<content type="html">&lt;h1 id=&quot;accessible-images-after&quot;&gt;accessible images: :after&lt;/h1&gt;
+&lt;p&gt;Above all, shall we say: The safest general characterization of the typesetting system tradition is that it consists of a series of footnotes to TeX? For now, I&amp;#8217;m using Typst exclusively. Although, given how new it is, I wouldn&amp;#8217;t be surprised in significant shortcomings.&lt;/p&gt;</description>
+			<link>https://barf.btxx.org/from-latex-to-typst</link>
+			<guid isPermaLink="false">https://barf.btxx.org/from-latex-to-typst</guid>
+			<pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<title>accessible images: :after</title>
+			<description>&lt;h1 id=&quot;accessible-images-after&quot;&gt;accessible images: :after&lt;/h1&gt;
 &lt;p&gt;2023-10-23&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This is specifically an alternate form of the unnecessarily-unstyled-in a-critical-manner broken image logo and alternate text, if added, we typically see for offline images on Chrome. It helps offline images look better on Firefox too. It sees little to no effect on Safari.&lt;/p&gt;
 &lt;p&gt;Styling the &lt;code&gt;img&lt;/code&gt; element to account for offline images–e.g., if the image path is not found, if the image has been deleted, if the connection has been broken and the image did not load, if the webmaster is forbidding the image to load, and so on–is a great accessibility practice.&lt;/p&gt;
@@ -226,15 +222,14 @@ img:after {
   background: gray;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The result for an image not found locally of the Milky Way Galaxy:&lt;/p&gt;</content>
-		<link href="https://barf.btxx.org/accessible-images-after"/>
-		<id>https://barf.btxx.org/accessible-images-after</id>
-		<updated>2023-10-23T10:00:00Z</updated>
-		<published>2023-10-23T10:00:00Z</published>
-	</entry>
-	<entry>
-		<title>accessible hyperlinks: :after</title>
-		<content type="html">&lt;h1 id=&quot;accessible-hyperlinks-after&quot;&gt;accessible hyperlinks: :after&lt;/h1&gt;
+&lt;p&gt;The result for an image not found locally of the Milky Way Galaxy:&lt;/p&gt;</description>
+			<link>https://barf.btxx.org/accessible-images-after</link>
+			<guid isPermaLink="false">https://barf.btxx.org/accessible-images-after</guid>
+			<pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<title>accessible hyperlinks: :after</title>
+			<description>&lt;h1 id=&quot;accessible-hyperlinks-after&quot;&gt;accessible hyperlinks: :after&lt;/h1&gt;
 &lt;p&gt;2023-10-05&lt;/p&gt;
 &lt;p&gt;A way to make hyperlinks accessible is by explictly informing the user when a hyperlink points externally. An option for this would be to use a north east arrow immediately after a hyperlink to denote it is &lt;em&gt;going outside&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Now, we don&amp;#8217;t want to have to copy and paste the HTML entity, HTML code, hex code, or even the UTF-8 character itself each time for an external hyperlink. Luckily, CSS has &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors&quot;&gt;attribute selectors&lt;/a&gt;:&lt;/p&gt;
@@ -265,15 +260,14 @@ img:after {
   &amp;#47;* north east arrow *&amp;#47;
   content: &quot;\2197&quot;;
 }
-&lt;/code&gt;&lt;/pre&gt;</content>
-		<link href="https://barf.btxx.org/accessible-hyperlinks-after"/>
-		<id>https://barf.btxx.org/accessible-hyperlinks-after</id>
-		<updated>2023-10-05T10:00:00Z</updated>
-		<published>2023-10-05T10:00:00Z</published>
-	</entry>
-	<entry>
-		<title>accessible hyperlinks: :active</title>
-		<content type="html">&lt;h1 id=&quot;accessible-hyperlinks-active&quot;&gt;accessible hyperlinks: :active&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
+			<link>https://barf.btxx.org/accessible-hyperlinks-after</link>
+			<guid isPermaLink="false">https://barf.btxx.org/accessible-hyperlinks-after</guid>
+			<pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<title>accessible hyperlinks: :active</title>
+			<description>&lt;h1 id=&quot;accessible-hyperlinks-active&quot;&gt;accessible hyperlinks: :active&lt;/h1&gt;
 &lt;p&gt;2023-10-21&lt;/p&gt;
 &lt;p&gt;To do accessibility on the web justice, it isn&amp;#8217;t enough having hyperlinks solely differentiated by their default styling provided by a browser&amp;#8217;s user agent stylesheet. I have been indifferent and susceptible to not doing this for a long time but over the years, I&amp;#8217;ve noticed this on a fair share of websites and I thought it was accessibly neat.&lt;/p&gt;
 &lt;p&gt;What I&amp;#8217;m talking about is this behavior you typically see in a &lt;code&gt;form&lt;/code&gt; input: an outline when you focus-in on the field. We may just as well fully adopt it for anchor elements.&lt;/p&gt;
@@ -289,10 +283,10 @@ img:after {
 &lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;a:active {
   outline: 1px solid;
 }
-&lt;/code&gt;&lt;/pre&gt;</content>
-		<link href="https://barf.btxx.org/accessible-hyperlinks-active"/>
-		<id>https://barf.btxx.org/accessible-hyperlinks-active</id>
-		<updated>2023-10-21T10:00:00Z</updated>
-		<published>2023-10-21T10:00:00Z</published>
-	</entry>
-</feed>
+&lt;/code&gt;&lt;/pre&gt;</description>
+			<link>https://barf.btxx.org/accessible-hyperlinks-active</link>
+			<guid isPermaLink="false">https://barf.btxx.org/accessible-hyperlinks-active</guid>
+			<pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
+		</item>
+</channel>
+</rss>

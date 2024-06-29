@@ -1,49 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, noarchive">
-    <meta name="color-scheme" content="light dark">
-    <title>accessible hyperlinks: :after</title>
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <link href="https://abgeschiedenheit.github.io/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for the weblog">
-  </head>
-  <header>
-    <nav>
-      <strong><a href="/">abgeschiedenheit.github.io</a></strong> (<a href="/atom.xml">feed</a>) | <a href="/about">about</a> | <a href="/projects">projects</a> | <a href="/playlist">playlist</a> | <a href="/words">words</a> | <a href="/resources">resources</a>
-    </nav>
-  </header>
-  <main>
-<h1>accessible hyperlinks: :after</h1>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, noarchive">
+	<link rel="icon" href="data:,">
+	<title>accessible hyperlinks: :after</title>
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for blog posts" />
+	<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="RSS feed for blog posts" />
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<header>
+  <nav>
+    <a href="#menu">menu &darr;</a>
+  </nav>
+</header>
+<main>
+<h1 id="accessible-hyperlinks-after">accessible hyperlinks: :after</h1>
 <p>2023-10-05</p>
 <p>A way to make hyperlinks accessible is by explictly informing the user when a hyperlink points externally. An option for this would be to use a north east arrow immediately after a hyperlink to denote it is <em>going outside</em>.</p>
-<p>Now, we don't want to have to copy and paste the HTML entity, HTML code, hex code, or even the UTF-8 character itself each time for an external hyperlink. Luckily, CSS has <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">attribute selectors</a>:</p>
-<blockquote><p>The CSS attribute selector matches elements based on the element having a given attribute explicitly set, with options for defining an attribute value or substring value match.</p>
+<p>Now, we don&#8217;t want to have to copy and paste the HTML entity, HTML code, hex code, or even the UTF-8 character itself each time for an external hyperlink. Luckily, CSS has <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">attribute selectors</a>:</p>
+<blockquote>
+<p>The CSS attribute selector matches elements based on the element having a given attribute explicitly set, with options for defining an attribute value or substring value match.</p>
 </blockquote>
-<p>This is to mean we can have an anchor element, <code>&lt;a&gt;</code>, with an attribute, in our case <code>href</code>, matching a particular value, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors#attrvalue_6"><code>[attr*=value]</code></a>:</p>
-<blockquote><p>Represents elements with an attribute name of attr whose value contains at least one occurrence of value within the string.</p>
+<p>This is to mean we can have an anchor element, <code>&#60;a&#62;</code>, with an attribute, in our case <code>href</code>, matching a particular value, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors#attrvalue_6"><code>[attr*=value]</code></a>:</p>
+<blockquote>
+<p>Represents elements with an attribute name of attr whose value contains at least one occurrence of value within the string.</p>
 </blockquote>
-<p>If we reflect a bit on what differentiates a local-pointing hyperlink versus an external-pointing hyperlink, we may come to the conclusion that external hyperlinks have two forward slashes in that <code>https://</code>. Where we are currently: <code>a[href*=&quot;//&quot;]</code>.</p>
-<p><strong>Note:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#href"><code>href</code></a> is not strictly restricted to HTTP-based URLs, e.g.: <code>tel:</code>, <code>mailto:</code>, and <code>sms</code>. Therefore, we may also have something like <code>a[href*=&quot;mailto:&quot;]</code>.</p>
+<p>If we reflect a bit on what differentiates a local-pointing hyperlink versus an external-pointing hyperlink, we may come to the conclusion that external hyperlinks have two forward slashes in that <code>https:&#47;&#47;</code>. Where we are currently: <code>a[href*="&#47;&#47;"]</code>.</p>
+<p><strong>Note:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#href"><code>href</code></a> is not strictly restricted to HTTP-based URLs, e.g.: <code>tel:</code>, <code>mailto:</code>, and <code>sms</code>. Therefore, we may also have something like <code>a[href*="mailto:"]</code>.</p>
 <p>At this point, we want to create a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a>:</p>
-<blockquote><p>A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element(s).</p>
+<blockquote>
+<p>A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element(s).</p>
 </blockquote>
 <p>What we are interested in our particular case is the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::after"><code>::after</code></a> psuedo-element:</p>
-<blockquote><p>In CSS, <code>::after</code> creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content"><code>content</code></a> property. It is inline by default.</p>
+<blockquote>
+<p>In CSS, <code>::after</code> creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content"><code>content</code></a> property. It is inline by default.</p>
 </blockquote>
 <p>As mentioned above, <code>::after</code>, indeed, is commonly used to add cosmetic content:</p>
-<blockquote><p>The <code>content</code> CSS property replaces content with a generated value. It can be used to define what is rendered inside an element or pseudo-element. For elements, the content property specifies whether the element renders normally (<code>normal</code> or <code>none</code>) or is replaced with an image (and associated "alt" text). For pseudo-elements and margin boxes, <code>content</code> defines the content as images, text, both, or none, which determines whether the element renders at all.</p>
+<blockquote>
+<p>The <code>content</code> CSS property replaces content with a generated value. It can be used to define what is rendered inside an element or pseudo-element. For elements, the content property specifies whether the element renders normally (<code>normal</code> or <code>none</code>) or is replaced with an image (and associated &#8220;alt&#8221; text). For pseudo-elements and margin boxes, <code>content</code> defines the content as images, text, both, or none, which determines whether the element renders at all.</p>
 </blockquote>
 <p>The <a href="https://www.toptal.com/designers/htmlarrows/arrows/north-east-arrow/">CSS code for a north east arrow</a> is the <code>\2197</code>. And so:</p>
-<pre><code class="language-css">a[href*=&quot;//&quot;]::after {
+<pre><code class="language-css">a[href*="&#47;&#47;"]::after {
   display: inline-block;
-  /* north east arrow */
-  content: &quot;\2197&quot;;
+  &#47;* north east arrow *&#47;
+  content: "\2197";
 }
 </code></pre>
-</main>
-<footer>
+<footer role="contentinfo">
+  <hr/>
+  <h3 id="menu">menu navigation</h3>
+  <ul>
+    <li><a href="/">index</a></li>
+    <li><a href="/about">about</a></li>
+    <li><a href="/projects">projects</a></li>
+    <li><a href="/uses">uses</a></li>
+    <li><a href="/playlist">playlist</a></li>
+    <li><a href="/words">words</a></li>
+    <li><a href="/resources">resources</a></li>
+  </ul>
   <small>
     <em>Every word was once a poem. Every new relation is a new word.</em>
   </small>

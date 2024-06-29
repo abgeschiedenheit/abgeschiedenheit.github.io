@@ -1,37 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, noarchive">
-    <meta name="color-scheme" content="light dark">
-    <title>from latex to typst</title>
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <link href="https://abgeschiedenheit.github.io/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for the weblog">
-  </head>
-  <header>
-    <nav>
-      <strong><a href="/">abgeschiedenheit.github.io</a></strong> (<a href="/atom.xml">feed</a>) | <a href="/about">about</a> | <a href="/projects">projects</a> | <a href="/playlist">playlist</a> | <a href="/words">words</a> | <a href="/resources">resources</a>
-    </nav>
-  </header>
-  <main>
-<h1>from latex to typst</h1>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, noarchive">
+	<link rel="icon" href="data:,">
+	<title>from latex to typst</title>
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for blog posts" />
+	<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="RSS feed for blog posts" />
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<header>
+  <nav>
+    <a href="#menu">menu &darr;</a>
+  </nav>
+</header>
+<main>
+<h1 id="from-latex-to-typst">from latex to typst</h1>
 <p>2023-11-13</p>
-<p>For as long as I remember, I've been using LaTeX, the typesetting system, for updating my résumé. My editor of choice was, not the web-based editor <a href="https://www.overleaf.com/">Overleaf</a>, but rather, <a href="https://pages.uoregon.edu/koch/">Richard Koch's</a> <a href="https://pages.uoregon.edu/koch/texshop/">TeXShop</a>–initially released in 2000.</p>
+<p>For as long as I remember, I&#8217;ve been using LaTeX, the typesetting system, for updating my résumé. My editor of choice was, not the web-based editor <a href="https://www.overleaf.com/">Overleaf</a>, but rather, <a href="https://pages.uoregon.edu/koch/">Richard Koch&#8217;s</a> <a href="https://pages.uoregon.edu/koch/texshop/">TeXShop</a>–initially released in 2000.</p>
 <p>It was always fun and interesting looking up solutions on the <a href="https://tex.stackexchange.com/">TeX Stack Exchange</a> for things I wanted to do but would quickly run into a wall trying to do. I mean, there is seemingly a high amount of material relating to TeX on the web that one is bound to find a solution to their problem eventually. And anyways, there is <a href="https://www.ctan.org/">CTAN</a>:</p>
-<blockquote><p>The Comprehensive TEX Archive Network (CTAN) is the central place for all kinds of material around TEX. CTAN has currently 6511 packages. 2955 contributors have contributed to it. Most of the packages are free and can be downloaded and used immediately.</p>
+<blockquote>
+<p>The Comprehensive TEX Archive Network (CTAN) is the central place for all kinds of material around TEX. CTAN has currently 6511 packages. 2955 contributors have contributed to it. Most of the packages are free and can be downloaded and used immediately.</p>
 </blockquote>
-<p>On the other hand, I came across <a href="https://typst.app">Typst</a>, a brand new typesetting system, a few months ago but it wasn't until a few nights ago that I played around with it. It might be that since I never had a web-based editor workflow (e.g., Overleaf) for working with LaTeX, I never realized the easy possibility of fledging out a fairly customized document quickly (i.e., without <em>building the document</em> as you do on TeXShop).</p>
+<p>On the other hand, I came across <a href="https://typst.app">Typst</a>, a brand new typesetting system, a few months ago but it wasn&#8217;t until a few nights ago that I played around with it. It might be that since I never had a web-based editor workflow (e.g., Overleaf) for working with LaTeX, I never realized the easy possibility of fledging out a fairly customized document quickly (i.e., without <em>building the document</em> as you do on TeXShop).</p>
 <p>What I like most about Typst, compared to TeX, is its syntax. The below shows what creating a simple rule looks like, which one may easily decipher:</p>
 <pre><code class="language-typst">#show heading.where(
   level: 2
-): it =&gt; {
+): it =&#62; {
   smallcaps(it)
 }
 </code></pre>
-<p>Above all, shall we say: The safest general characterization of the typesetting system tradition is that it consists of a series of footnotes to TeX? For now, I'm using Typst exclusively. Although, given how new it is, I wouldn't be surprised in significant shortcomings.</p>
-</main>
-<footer>
+<p>Above all, shall we say: The safest general characterization of the typesetting system tradition is that it consists of a series of footnotes to TeX? For now, I&#8217;m using Typst exclusively. Although, given how new it is, I wouldn&#8217;t be surprised in significant shortcomings.</p>
+<footer role="contentinfo">
+  <hr/>
+  <h3 id="menu">menu navigation</h3>
+  <ul>
+    <li><a href="/">index</a></li>
+    <li><a href="/about">about</a></li>
+    <li><a href="/projects">projects</a></li>
+    <li><a href="/uses">uses</a></li>
+    <li><a href="/playlist">playlist</a></li>
+    <li><a href="/words">words</a></li>
+    <li><a href="/resources">resources</a></li>
+  </ul>
   <small>
     <em>Every word was once a poem. Every new relation is a new word.</em>
   </small>

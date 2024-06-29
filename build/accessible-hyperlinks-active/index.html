@@ -1,37 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, noarchive">
-    <meta name="color-scheme" content="light dark">
-    <title>accessible hyperlinks: :active</title>
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <link href="https://abgeschiedenheit.github.io/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for the weblog">
-  </head>
-  <header>
-    <nav>
-      <strong><a href="/">abgeschiedenheit.github.io</a></strong> (<a href="/atom.xml">feed</a>) | <a href="/about">about</a> | <a href="/projects">projects</a> | <a href="/playlist">playlist</a> | <a href="/words">words</a> | <a href="/resources">resources</a>
-    </nav>
-  </header>
-  <main>
-<h1>accessible hyperlinks: :active</h1>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, noarchive">
+	<link rel="icon" href="data:,">
+	<title>accessible hyperlinks: :active</title>
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for blog posts" />
+	<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="RSS feed for blog posts" />
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<header>
+  <nav>
+    <a href="#menu">menu &darr;</a>
+  </nav>
+</header>
+<main>
+<h1 id="accessible-hyperlinks-active">accessible hyperlinks: :active</h1>
 <p>2023-10-21</p>
-<p>To do accessibility on the web justice, it isn't enough having hyperlinks solely differentiated by their default styling provided by a browser's user agent stylesheet. I have been indifferent and susceptible to not doing this for a long time but over the years, I've noticed this on a fair share of websites and I thought it was accessibly neat.</p>
-<p>What I'm talking about is this behavior you typically see in a <code>form</code> input: an outline when you focus-in on the field. We may just as well fully adopt it for anchor elements.</p>
-<p>What we'll need is the <code>:active</code> pseudo-class:</p>
-<blockquote><p>The <code>:active</code> CSS pseudo-class represents an element (such as a button) that is being activated by the user. When using a mouse, "activation" typically starts when the user presses down the primary mouse button.</p>
+<p>To do accessibility on the web justice, it isn&#8217;t enough having hyperlinks solely differentiated by their default styling provided by a browser&#8217;s user agent stylesheet. I have been indifferent and susceptible to not doing this for a long time but over the years, I&#8217;ve noticed this on a fair share of websites and I thought it was accessibly neat.</p>
+<p>What I&#8217;m talking about is this behavior you typically see in a <code>form</code> input: an outline when you focus-in on the field. We may just as well fully adopt it for anchor elements.</p>
+<p>What we&#8217;ll need is the <code>:active</code> pseudo-class:</p>
+<blockquote>
+<p>The <code>:active</code> CSS pseudo-class represents an element (such as a button) that is being activated by the user. When using a mouse, &#8220;activation&#8221; typically starts when the user presses down the primary mouse button.</p>
 </blockquote>
 <p>And the <code>outline</code> CSS property:</p>
-<blockquote><p>Outline is a line outside of the element's border. Unlike other areas of the box, outlines don't take up space, so they don't affect the layout of the document in any way.</p>
+<blockquote>
+<p>Outline is a line outside of the element&#8217;s border. Unlike other areas of the box, outlines don&#8217;t take up space, so they don&#8217;t affect the layout of the document in any way.</p>
 </blockquote>
 <p>Therefore, the standard for hyperlinks around the web should have something like this (as used on this site):</p>
 <pre><code class="language-css">a:active {
   outline: 1px solid;
 }
 </code></pre>
-</main>
-<footer>
+<footer role="contentinfo">
+  <hr/>
+  <h3 id="menu">menu navigation</h3>
+  <ul>
+    <li><a href="/">index</a></li>
+    <li><a href="/about">about</a></li>
+    <li><a href="/projects">projects</a></li>
+    <li><a href="/uses">uses</a></li>
+    <li><a href="/playlist">playlist</a></li>
+    <li><a href="/words">words</a></li>
+    <li><a href="/resources">resources</a></li>
+  </ul>
   <small>
     <em>Every word was once a poem. Every new relation is a new word.</em>
   </small>

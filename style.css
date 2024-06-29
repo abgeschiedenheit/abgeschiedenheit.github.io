@@ -1,20 +1,6 @@
 @font-face {
   font-family: "intel";
   src: url("public/intel_regular.woff2") format("woff2");
-  font-style: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ltr";
-  src: url("public/ltr.woff2") format("woff2");
-  font-style: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Libcziowes";
-  src: url("public/Libcziowes-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -57,51 +43,15 @@ body {
   background-color: #123400;
   color: #fdf5e6;
   font-family: "mediaeval", serif;
-  line-height: 2;
+  line-height: 1.33;
   margin: 0 auto;
-  max-width: 800px;
-  padding: 0 2rem;
-  word-spacing: 0.6rem;
-}
-
-header {
-  text-align: center;
-  top: 0;
-  position: static;
-  font-size: small;
-  background-color: #0d2600;
-  border-bottom: 4px solid #0b2000;
-  border-left: 2px solid #0b2000;
-  border-right: 2px solid #0b2000;
-}
-
-nav {
-  padding: 5px 20px;
-}
-
-nav a:link {
-  color: #fdf5e6;
-  text-decoration: none;
-  padding: 2px;
-}
-
-nav a:visited {
-  color: #fdf5e6;
-}
-
-nav a:hover {
-  color: #fdf5e6;
-  text-decoration: underline;
-}
-
-nav a:active {
-  color: #fdf5e6;
-  outline: 1px solid #fdf5e6;
+  max-width: 688px;
+  padding: 1rem 2rem;
 }
 
 a:link {
   color: #beb4ff;
-  padding: 2px;
+  padding: 0 2px;
 }
 
 a:visited {
@@ -113,37 +63,24 @@ a:hover {
 }
 
 a[href*="//"]::after {
-  font-family: "ltr", serif;
   font-size: 80%;
-  content: "\2192";
+  content: "\2197";
 }
 
 a:active {
-  outline: 2px dotted #beb4ff;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  line-height: 1.3;
-  font-variant: small-caps;
+  outline: 1px solid #beb4ff;
 }
 
 h1 {
-  font-size: 140%;
+  font-size: 130%;
 }
 
 h2 {
-  font-size: 120%;
+  font-size: 115%;
 }
 
 h3 {
   font-size: 105%;
-}
-
-main {
-  margin-top: 2rem;
 }
 
 img {
@@ -168,13 +105,12 @@ img:after {
   width: 100%;
   height: 100%;
   color: #111;
-  background-color: #beb4ff;;
+  background-color: #BABABA;
 }
 
 blockquote {
-  line-height: 1.4;
   padding: 0 1rem;
-  border-left: 2px solid #beb4ff;
+  border-left: 2px solid #BABABA;
   color: #fdf5e6;
 }
 
@@ -183,20 +119,18 @@ pre,
 kbd,
 samp {
   font-family: "intel", monospace;
-  font-size: 86%;
-  line-height: 1.3;
-  padding: 1px 4px;
+  font-size: 90%;
+  padding: 0 3px;
   border-radius: 3px;
-  border: 1px solid #beb4ff;
-  color: #fdf5e6;
+  border: 1px solid #BABABA;
 }
 
 kbd {
-  border-bottom: 3px solid #beb4ff;
+  border-bottom: 3px solid #BABABA;
 }
 
 pre {
-  padding: 1rem 1.4rem;
+  padding: 5px 10px;
   max-width: 100%;
   overflow: auto;
 }
@@ -223,16 +157,17 @@ figcaption {
   color: #BABABA;
 }
 
-small, .date {
+p > img {
+  width: 30%;
+}
+
+small, span {
   color: #BABABA;
   line-height: 1.2;
 }
 
 footer {
-  text-align: center;
   margin-top: 2rem;
-  margin-bottom: 2rem;
-  line-height: 1.2;
 }
 
 small a:link {
@@ -245,43 +180,4 @@ small a:visited {
 
 small a:active {
   outline: 1px solid #BABABA;
-}
-
-@supports (color-scheme: dark light) {
-  @media screen and (prefers-color-scheme: light) {
-      body { 
-        background-color: #fdf5e6;
-        color: #123400;
-      }
-      a:link, a:hover, a:visited {
-        color: #3413ff;
-      }
-      a:active {
-        outline: 1px solid #3413ff;
-      }
-      h1, h2, h3, h4 {
-        border-bottom: 1px solid #3413ff;
-      }
-      img:after {
-        background-color: #3413ff;
-        color: #fdf5e6;
-      }
-      blockquote {
-        border-left: 2px solid #3413ff;
-        color: #123400;
-      }
-      code,
-      pre,
-      kbd,
-      samp {
-        border: 1px solid #3413ff;
-        color: #123400;
-      }
-      figcaption, small, span, small a:link, small a:hover, small a:visited {
-        color: #525252;
-      }
-      small a:active {
-        outline: 1px solid #525252;
-      }
-  }
 }

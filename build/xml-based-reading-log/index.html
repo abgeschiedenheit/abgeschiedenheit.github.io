@@ -1,83 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, noarchive">
-    <meta name="color-scheme" content="light dark">
-    <title>xml-based library</title>
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <link href="https://abgeschiedenheit.github.io/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for the weblog">
-  </head>
-  <header>
-    <nav>
-      <strong><a href="/">abgeschiedenheit.github.io</a></strong> (<a href="/atom.xml">feed</a>) | <a href="/about">about</a> | <a href="/projects">projects</a> | <a href="/playlist">playlist</a> | <a href="/words">words</a> | <a href="/resources">resources</a>
-    </nav>
-  </header>
-  <main>
-<h1>xml-based library</h1>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, noarchive">
+	<link rel="icon" href="data:,">
+	<title>xml-based library</title>
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for blog posts" />
+	<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="RSS feed for blog posts" />
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<header>
+  <nav>
+    <a href="#menu">menu &darr;</a>
+  </nav>
+</header>
+<main>
+<h1 id="xml-based-library">xml-based library</h1>
 <p>2023-11-16</p>
 <p>Having never seriously used XML, I decided to build a library page, a list of some of my favorite creative works in a table format, with it. The source of the library page is an XML document, albeit, a fairly simple one at the moment:</p>
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;library&gt;
-	&lt;book category=&quot;theology&quot;&gt;
-		&lt;title&gt;God In Our Hands&lt;/title&gt;
-		&lt;author&gt;Graham Shaw&lt;/author&gt;
-		&lt;publisher&gt;SCM Press&lt;/publisher&gt;
-		&lt;year&gt;1987&lt;/year&gt;
-		&lt;read&gt;Fall 2023&lt;/read&gt;
-	&lt;/book&gt;
-&lt;/library&gt;
+<pre><code class="language-xml">&#60;?xml version="1.0" encoding="UTF-8"?&#62;
+&#60;library&#62;
+    &#60;book category="theology"&#62;
+        &#60;title&#62;God In Our Hands&#60;&#47;title&#62;
+        &#60;author&#62;Graham Shaw&#60;&#47;author&#62;
+        &#60;publisher&#62;SCM Press&#60;&#47;publisher&#62;
+        &#60;year&#62;1987&#60;&#47;year&#62;
+        &#60;read&#62;Fall 2023&#60;&#47;read&#62;
+    &#60;&#47;book&#62;
+&#60;&#47;library&#62;
 </code></pre>
 <p>As usual, convert the XML to XSLT:</p>
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
-&lt;xsl:template match=&quot;/&quot;&gt;
-	&lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt;library&lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;h1&gt;library&lt;/h1&gt;
-		&lt;p&gt;A list of some of my favorite creative works.
-		&lt;/p&gt;
-		&lt;hr/&gt;
-		&lt;table&gt;
-      		&lt;tr&gt;
-        		&lt;th&gt;title&lt;/th&gt;
-    			&lt;th&gt;author&lt;/th&gt;
-    			&lt;th&gt;publisher&lt;/th&gt;
-    			&lt;th&gt;year&lt;/th&gt;
-    			&lt;th&gt;read&lt;/th&gt;
-      		&lt;/tr&gt;
-      		&lt;xsl:for-each select=&quot;library/book&quot;&gt;
-      		&lt;tr&gt;
-    			&lt;td&gt;&lt;xsl:value-of select=&quot;title&quot;/&gt;&lt;/td&gt;
-    			&lt;td&gt;&lt;xsl:value-of select=&quot;author&quot;/&gt;&lt;/td&gt;
-    			&lt;td&gt;&lt;xsl:value-of select=&quot;publisher&quot;/&gt;&lt;/td&gt;
-    			&lt;td&gt;&lt;xsl:value-of select=&quot;year&quot;/&gt;&lt;/td&gt;
-    			&lt;td&gt;&lt;xsl:value-of select=&quot;read&quot;/&gt;&lt;/td&gt;
-      		&lt;/tr&gt;
-      		&lt;/xsl:for-each&gt;
-   		&lt;/table&gt;
-	&lt;/body&gt;
-	&lt;/html&gt;
-&lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;
+<pre><code class="language-xml">&#60;?xml version="1.0" encoding="UTF-8"?&#62;
+&#60;xsl:stylesheet version="1.0" xmlns:xsl="http:&#47;&#47;www.w3.org&#47;1999&#47;XSL&#47;Transform"&#62;
+&#60;xsl:template match="&#47;"&#62;
+    &#60;html&#62;
+    &#60;head&#62;
+        &#60;title&#62;library&#60;&#47;title&#62;
+    &#60;&#47;head&#62;
+    &#60;body&#62;
+        &#60;h1&#62;library&#60;&#47;h1&#62;
+        &#60;p&#62;A list of some of my favorite creative works.
+        &#60;&#47;p&#62;
+        &#60;hr&#47;&#62;
+        &#60;table&#62;
+            &#60;tr&#62;
+                &#60;th&#62;title&#60;&#47;th&#62;
+                &#60;th&#62;author&#60;&#47;th&#62;
+                &#60;th&#62;publisher&#60;&#47;th&#62;
+                &#60;th&#62;year&#60;&#47;th&#62;
+                &#60;th&#62;read&#60;&#47;th&#62;
+            &#60;&#47;tr&#62;
+            &#60;xsl:for-each select="library&#47;book"&#62;
+            &#60;tr&#62;
+                &#60;td&#62;&#60;xsl:value-of select="title"&#47;&#62;&#60;&#47;td&#62;
+                &#60;td&#62;&#60;xsl:value-of select="author"&#47;&#62;&#60;&#47;td&#62;
+                &#60;td&#62;&#60;xsl:value-of select="publisher"&#47;&#62;&#60;&#47;td&#62;
+                &#60;td&#62;&#60;xsl:value-of select="year"&#47;&#62;&#60;&#47;td&#62;
+                &#60;td&#62;&#60;xsl:value-of select="read"&#47;&#62;&#60;&#47;td&#62;
+            &#60;&#47;tr&#62;
+            &#60;&#47;xsl:for-each&#62;
+        &#60;&#47;table&#62;
+    &#60;&#47;body&#62;
+    &#60;&#47;html&#62;
+&#60;&#47;xsl:template&#62;
+&#60;&#47;xsl:stylesheet&#62;
 </code></pre>
 <p>Considering the structure of my website, the above two files, <code>library.xml</code> and <code>library.xslt</code> are standalone at the root of the website given they are unnecessary to the production of the website, i.e., they are not part of the makefile. This is logical: none of those files outputs to something web-friendly to display.</p>
 <p>And therefore, a handy library already pre-installed on macOS computers: <a href="https://opensource.apple.com/source/libxslt/libxslt-5/libxslt/doc/xsltproc.html">xsltproc</a>, a command line xslt processor.</p>
-<blockquote><p>xsltproc is a command line tool for applying XSLT stylesheets to XML documents. It is part of libxslt, the XSLT C library for GNOME. While it was developed as part of the GNOME project, it can operate independently of the GNOME desktop.</p>
+<blockquote>
+<p>xsltproc is a command line tool for applying XSLT stylesheets to XML documents. It is part of libxslt, the XSLT C library for GNOME. While it was developed as part of the GNOME project, it can operate independently of the GNOME desktop.</p>
 <p>xsltproc is invoked from the command line with the name of the stylesheet to be used followed by the name of the file or files to which the stylesheet is to be applied.</p>
 <p>If a stylesheet is included in an XML document with a Stylesheet Processing Instruction, no stylesheet need be named at the command line. xsltproc will automatically detect the included stylesheet and use it.</p>
 <p>By default, output is to stdout. You can specify a file for output using the <code>-o</code> option.</p>
 </blockquote>
 <p>At the root of my website, I run:</p>
-<pre><code class="language-bash">xsltproc -o ./pages/library.md  library.xslt library.xml
+<pre><code class="language-bash">xsltproc -o .&#47;pages&#47;library.md  library.xslt library.xml
 </code></pre>
 <p>This applies the XSLT file to the XML file and through XSLT converts it to HTML. The output file is placed right in my pages folder where it gets rendered not only as a proper document but also according to my already defined stylesheet. I leave the output file, the HTML document, untouched. Note: Markdown automatically converts HTML to Markdown.</p>
-</main>
-<footer>
+<footer role="contentinfo">
+  <hr/>
+  <h3 id="menu">menu navigation</h3>
+  <ul>
+    <li><a href="/">index</a></li>
+    <li><a href="/about">about</a></li>
+    <li><a href="/projects">projects</a></li>
+    <li><a href="/uses">uses</a></li>
+    <li><a href="/playlist">playlist</a></li>
+    <li><a href="/words">words</a></li>
+    <li><a href="/resources">resources</a></li>
+  </ul>
   <small>
     <em>Every word was once a poem. Every new relation is a new word.</em>
   </small>

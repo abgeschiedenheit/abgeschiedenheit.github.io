@@ -1,34 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, noarchive">
-    <meta name="color-scheme" content="light dark">
-    <title>accessible images: :after</title>
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <link href="https://abgeschiedenheit.github.io/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for the weblog">
-  </head>
-  <header>
-    <nav>
-      <strong><a href="/">abgeschiedenheit.github.io</a></strong> (<a href="/atom.xml">feed</a>) | <a href="/about">about</a> | <a href="/projects">projects</a> | <a href="/playlist">playlist</a> | <a href="/words">words</a> | <a href="/resources">resources</a>
-    </nav>
-  </header>
-  <main>
-<h1>accessible images: :after</h1>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, noarchive">
+	<link rel="icon" href="data:,">
+	<title>accessible images: :after</title>
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for blog posts" />
+	<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="RSS feed for blog posts" />
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<header>
+  <nav>
+    <a href="#menu">menu &darr;</a>
+  </nav>
+</header>
+<main>
+<h1 id="accessible-images-after">accessible images: :after</h1>
 <p>2023-10-23</p>
 <p><strong>Note:</strong> This is specifically an alternate form of the unnecessarily-unstyled-in a-critical-manner broken image logo and alternate text, if added, we typically see for offline images on Chrome. It helps offline images look better on Firefox too. It sees little to no effect on Safari.</p>
 <p>Styling the <code>img</code> element to account for offline images–e.g., if the image path is not found, if the image has been deleted, if the connection has been broken and the image did not load, if the webmaster is forbidding the image to load, and so on–is a great accessibility practice.</p>
 <p>Like we thought for <a href="/accessible-hyperlinks-after">accessible externally-pointing hyperlinks</a>, our thinking is similar here: what we are interested in is the <em>after-the-matter</em> fact, i.e., <code>:after</code>.</p>
-<p>A pre-requisite for the following is to subscribe to the seemingly most pressing accessibility issue on the web: using the <code>img</code> element's <code>alt</code> property.</p>
-<blockquote><p>The <code>HTMLImageElement</code> property <code>alt</code> provides fallback (alternate) text to display when the image specified by the <code>&lt;img&gt;</code> element is not loaded.</p>
-<p>...</p>
+<p>A pre-requisite for the following is to subscribe to the seemingly most pressing accessibility issue on the web: using the <code>img</code> element&#8217;s <code>alt</code> property.</p>
+<blockquote>
+<p>The <code>HTMLImageElement</code> property <code>alt</code> provides fallback (alternate) text to display when the image specified by the <code>&#60;img&#62;</code> element is not loaded.</p>
+<p>&#8230;</p>
 <p>Perhaps the most important reason to use the <code>alt</code> property is to support accessibility, as the <code>alt</code> text may be used by screen readers and other assistive technologies to help differently-abled users make full use of your content. It will be read aloud or sent to the touch device, for example, to support visually impaired users.</p>
 </blockquote>
 <p>Now, the first on this log, something handy for our situation, a CSS function.</p>
-<blockquote><p>The <code>attr()</code> CSS function is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. It can also be used on pseudo-elements, in which case the value of the attribute on the pseudo-element's originating element is returned.</p>
+<blockquote>
+<p>The <code>attr()</code> CSS function is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. It can also be used on pseudo-elements, in which case the value of the attribute on the pseudo-element&#8217;s originating element is returned.</p>
 </blockquote>
-<p>You may now suddenly infer what we are doing. If a visitor to our website can't retrieve a particular image, we throw out the particular <code>alt</code> text for the respective image to indicate what the image was. This is incredibly useful but not surprising:</p>
+<p>You may now suddenly infer what we are doing. If a visitor to our website can&#8217;t retrieve a particular image, we throw out the particular <code>alt</code> text for the respective image to indicate what the image was. This is incredibly useful but not surprising:</p>
 <pre><code class="language-css">img:after {
   content: attr(alt);
 }
@@ -39,7 +42,7 @@
   min-height: 4em;
   height: auto;
 
-  /* :after styling necessities */
+  &#47;* :after styling necessities *&#47;
   display: block;
   position: relative;
 }
@@ -47,17 +50,17 @@
 img:after {
   font-size: 90%;
 
-  /* spit out the alt text */
+  &#47;* spit out the alt text *&#47;
   content: attr(alt);
 
-  /* vertically center the alt text */
+  &#47;* vertically center the alt text *&#47;
   display: grid;
   align-content: center;
 
-  /* horizontally center the alt text */
+  &#47;* horizontally center the alt text *&#47;
   text-align: center;
 
-  /* overlap default alt text */
+  &#47;* overlap default alt text *&#47;
   position: absolute;
   z-index: 2;
   top: 0;
@@ -65,15 +68,23 @@ img:after {
   width: 100%;
   height: 100%;
 
-  /* make lack of image distinctive */
+  &#47;* make lack of image distinctive *&#47;
   background: gray;
 }
 </code></pre>
 <p>The result for an image not found locally of the Milky Way Galaxy:</p>
-<p><img class="accessible-image" src="../public/images/milky-way-galaxy.jpg" alt="Picture of the Milky Way Galaxy">
-</p>
-</main>
-<footer>
+<footer role="contentinfo">
+  <hr/>
+  <h3 id="menu">menu navigation</h3>
+  <ul>
+    <li><a href="/">index</a></li>
+    <li><a href="/about">about</a></li>
+    <li><a href="/projects">projects</a></li>
+    <li><a href="/uses">uses</a></li>
+    <li><a href="/playlist">playlist</a></li>
+    <li><a href="/words">words</a></li>
+    <li><a href="/resources">resources</a></li>
+  </ul>
   <small>
     <em>Every word was once a poem. Every new relation is a new word.</em>
   </small>
