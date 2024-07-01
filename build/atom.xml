@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>weblog</title>
-	<link href="https://barf.btxx.org/atom.xml" rel="self" />
-	<updated>2024-06-29T03:54:22Z</updated>
+	<link href="https://abgeschiedenheit.github.io/atom.xml" rel="self" />
+	<updated>2024-07-01T01:15:56Z</updated>
 	<author>
 		<name>abgeschiedenheit</name>
 	</author>
-	<id>https://barf.btxx.org,2024-03-15:default-atom-feed/</id>
+	<id>https://abgeschiedenheit.github.io,2024-03-15:default-atom-feed/</id>
 	<entry>
 		<title>xml-based library</title>
 		<content type="html">&lt;h1 id=&quot;xml-based-library&quot;&gt;xml-based library&lt;/h1&gt;
@@ -71,8 +71,8 @@
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;xsltproc -o .&amp;#47;pages&amp;#47;library.md  library.xslt library.xml
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This applies the XSLT file to the XML file and through XSLT converts it to HTML. The output file is placed right in my pages folder where it gets rendered not only as a proper document but also according to my already defined stylesheet. I leave the output file, the HTML document, untouched. Note: Markdown automatically converts HTML to Markdown.&lt;/p&gt;</content>
-		<link href="https://barf.btxx.org/xml-based-reading-log"/>
-		<id>https://barf.btxx.org/xml-based-reading-log</id>
+		<link href="https://abgeschiedenheit.github.io/xml-based-reading-log"/>
+		<id>https://abgeschiedenheit.github.io/xml-based-reading-log</id>
 		<updated>2023-11-16T10:00:00Z</updated>
 		<published>2023-11-16T10:00:00Z</published>
 	</entry>
@@ -91,8 +91,8 @@
 &lt;li&gt;Furthermore, take into account, for a given project, the &lt;code&gt;node_modules&lt;/code&gt; folder and all the &lt;code&gt;&quot;dependencies&quot;&lt;/code&gt; and &lt;code&gt;&quot;devDependencies&quot;&lt;/code&gt;, and their dependencies, ad infinitum.&lt;/li&gt;
 &lt;li&gt;Regardless of the latter ending up in a &lt;code&gt;.gitignore&lt;/code&gt;, the memory requirements of modern web development is seemingly complex.&lt;/li&gt;
 &lt;/ul&gt;</content>
-		<link href="https://barf.btxx.org/the-cost-of-modern-webdev"/>
-		<id>https://barf.btxx.org/the-cost-of-modern-webdev</id>
+		<link href="https://abgeschiedenheit.github.io/the-cost-of-modern-webdev"/>
+		<id>https://abgeschiedenheit.github.io/the-cost-of-modern-webdev</id>
 		<updated>2023-10-17T10:00:00Z</updated>
 		<published>2023-10-17T10:00:00Z</published>
 	</entry>
@@ -130,8 +130,8 @@
 &lt;p&gt;&lt;code&gt;e.&lt;/code&gt; follows the instructions of seperation, that the &lt;code&gt;e&lt;/code&gt; beginning character must be seperated from the &lt;code&gt;e&lt;/code&gt; ending character. This is logical. Using the &lt;code&gt;node&lt;/code&gt; REPL, &lt;code&gt;&amp;#47;e.&amp;#47;.test(&amp;#39;e&amp;#39;)&lt;/code&gt; turns out to be &lt;code&gt;false&lt;/code&gt;. The wildcard metacharacter is indicating another character must follow the character &lt;code&gt;e&lt;/code&gt; for there to be a match.&lt;/p&gt;
 &lt;p&gt;The following asterisk operator in &lt;code&gt;e.*&lt;/code&gt; requires similar thinking. For instance, why doesn&amp;#8217;t &lt;code&gt;e.+&lt;/code&gt; suffice? Why does &lt;code&gt;&amp;#47;e.+e&amp;#47;.test(&amp;#39;ee&amp;#39;)&lt;/code&gt; evaluate to &lt;code&gt;false&lt;/code&gt;? On the other hand, why does &lt;code&gt;&amp;#47;e.*e&amp;#47;.test(&amp;#39;ee&amp;#39;)&lt;/code&gt; evaluate to &lt;code&gt;true&lt;/code&gt;? Well, the former requires at least one instance of seperation between &lt;code&gt;ee&lt;/code&gt; to occur whereas the latter allows for zero instances of seperation between &lt;code&gt;ee&lt;/code&gt; to occur. &lt;/p&gt;
 &lt;p&gt;Above all, I&amp;#8217;m looking forward to getting deeper into regex. They might be handy in some particular cases. I&amp;#8217;m here instinctively thinking of using regex to mask my e-mail if it&amp;#8217;s listed on a public website. Who knows? While fun to work through, I&amp;#8217;m able to foresee regular expressions becoming exceedingly complex.&lt;/p&gt;</content>
-		<link href="https://barf.btxx.org/introductory-regex-problem"/>
-		<id>https://barf.btxx.org/introductory-regex-problem</id>
+		<link href="https://abgeschiedenheit.github.io/introductory-regex-problem"/>
+		<id>https://abgeschiedenheit.github.io/introductory-regex-problem</id>
 		<updated>2024-02-26T10:00:00Z</updated>
 		<published>2024-02-26T10:00:00Z</published>
 	</entry>
@@ -140,8 +140,8 @@
 		<content type="html">&lt;h1 id=&quot;interaction-heavy-information-weak&quot;&gt;interaction-heavy, information-weak&lt;/h1&gt;
 &lt;p&gt;2023-12-11&lt;/p&gt;
 &lt;p&gt;What makes accessibility difficult is the thin-line it operates in so as not to fall under this all too common software curse of being interaction-heavy but information-weak. The high degree of criticality in accessibility often means the user&amp;#8217;s intention lies outside interactivity. As for the rest, interaction must be enjoyable and educational lest our design fails in the domain of information software.&lt;/p&gt;</content>
-		<link href="https://barf.btxx.org/interaction-heavy-information-weak"/>
-		<id>https://barf.btxx.org/interaction-heavy-information-weak</id>
+		<link href="https://abgeschiedenheit.github.io/interaction-heavy-information-weak"/>
+		<id>https://abgeschiedenheit.github.io/interaction-heavy-information-weak</id>
 		<updated>2023-12-11T10:00:00Z</updated>
 		<published>2023-12-11T10:00:00Z</published>
 	</entry>
@@ -163,8 +163,8 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Above all, shall we say: The safest general characterization of the typesetting system tradition is that it consists of a series of footnotes to TeX? For now, I&amp;#8217;m using Typst exclusively. Although, given how new it is, I wouldn&amp;#8217;t be surprised in significant shortcomings.&lt;/p&gt;</content>
-		<link href="https://barf.btxx.org/from-latex-to-typst"/>
-		<id>https://barf.btxx.org/from-latex-to-typst</id>
+		<link href="https://abgeschiedenheit.github.io/from-latex-to-typst"/>
+		<id>https://abgeschiedenheit.github.io/from-latex-to-typst</id>
 		<updated>2023-11-13T10:00:00Z</updated>
 		<published>2023-11-13T10:00:00Z</published>
 	</entry>
@@ -227,8 +227,8 @@ img:after {
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The result for an image not found locally of the Milky Way Galaxy:&lt;/p&gt;</content>
-		<link href="https://barf.btxx.org/accessible-images-after"/>
-		<id>https://barf.btxx.org/accessible-images-after</id>
+		<link href="https://abgeschiedenheit.github.io/accessible-images-after"/>
+		<id>https://abgeschiedenheit.github.io/accessible-images-after</id>
 		<updated>2023-10-23T10:00:00Z</updated>
 		<published>2023-10-23T10:00:00Z</published>
 	</entry>
@@ -266,8 +266,8 @@ img:after {
   content: &quot;\2197&quot;;
 }
 &lt;/code&gt;&lt;/pre&gt;</content>
-		<link href="https://barf.btxx.org/accessible-hyperlinks-after"/>
-		<id>https://barf.btxx.org/accessible-hyperlinks-after</id>
+		<link href="https://abgeschiedenheit.github.io/accessible-hyperlinks-after"/>
+		<id>https://abgeschiedenheit.github.io/accessible-hyperlinks-after</id>
 		<updated>2023-10-05T10:00:00Z</updated>
 		<published>2023-10-05T10:00:00Z</published>
 	</entry>
@@ -290,8 +290,8 @@ img:after {
   outline: 1px solid;
 }
 &lt;/code&gt;&lt;/pre&gt;</content>
-		<link href="https://barf.btxx.org/accessible-hyperlinks-active"/>
-		<id>https://barf.btxx.org/accessible-hyperlinks-active</id>
+		<link href="https://abgeschiedenheit.github.io/accessible-hyperlinks-active"/>
+		<id>https://abgeschiedenheit.github.io/accessible-hyperlinks-active</id>
 		<updated>2023-10-21T10:00:00Z</updated>
 		<published>2023-10-21T10:00:00Z</published>
 	</entry>

@@ -1,11 +1,11 @@
-# projects
+# play
 
 ## locally
 
-- **[art](/art)** search the Harvard Arts Museums
-- **[jot](/jot)** jot down memos
-- **[square](/square)** see _Homage to the Square_ emulations 
-- **[music](/music)** listen to Glenn Gould
+- **[art](/art)** Search the Harvard Arts Museums
+- **[jot](/jot)** Jot down memos
+- **[square](/square)** See _Homage to the Square_ emulations 
+- **[music](/music)** Listen to Glenn Gould
 
 ## external
 

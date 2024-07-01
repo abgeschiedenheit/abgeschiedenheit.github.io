@@ -2,10 +2,10 @@
 <rss version="2.0">
 	<channel>
 		<title>weblog</title>
-		<link>https://barf.btxx.org/rss.xml</link>
+		<link>https://abgeschiedenheit.github.io/rss.xml</link>
 		<description>Feed description here</description>
-		<lastBuildDate>Sat, 29 Jun 2024 10:54:22 +0000</lastBuildDate>
-		<pubDate>Sat, 29 Jun 2024 10:54:22 +0000</pubDate>
+		<lastBuildDate>Mon, 01 Jul 2024 08:15:56 +0000</lastBuildDate>
+		<pubDate>Mon, 01 Jul 2024 08:15:56 +0000</pubDate>
 		<generator>Custom RSS Generator</generator>
 		<ttl>1800</ttl>
 		<item>
@@ -72,8 +72,8 @@
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;xsltproc -o .&amp;#47;pages&amp;#47;library.md  library.xslt library.xml
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This applies the XSLT file to the XML file and through XSLT converts it to HTML. The output file is placed right in my pages folder where it gets rendered not only as a proper document but also according to my already defined stylesheet. I leave the output file, the HTML document, untouched. Note: Markdown automatically converts HTML to Markdown.&lt;/p&gt;</description>
-			<link>https://barf.btxx.org/xml-based-reading-log</link>
-			<guid isPermaLink="false">https://barf.btxx.org/xml-based-reading-log</guid>
+			<link>https://abgeschiedenheit.github.io/xml-based-reading-log</link>
+			<guid isPermaLink="false">https://abgeschiedenheit.github.io/xml-based-reading-log</guid>
 			<pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
 		</item>
 		<item>
@@ -91,8 +91,8 @@
 &lt;li&gt;Furthermore, take into account, for a given project, the &lt;code&gt;node_modules&lt;/code&gt; folder and all the &lt;code&gt;&quot;dependencies&quot;&lt;/code&gt; and &lt;code&gt;&quot;devDependencies&quot;&lt;/code&gt;, and their dependencies, ad infinitum.&lt;/li&gt;
 &lt;li&gt;Regardless of the latter ending up in a &lt;code&gt;.gitignore&lt;/code&gt;, the memory requirements of modern web development is seemingly complex.&lt;/li&gt;
 &lt;/ul&gt;</description>
-			<link>https://barf.btxx.org/the-cost-of-modern-webdev</link>
-			<guid isPermaLink="false">https://barf.btxx.org/the-cost-of-modern-webdev</guid>
+			<link>https://abgeschiedenheit.github.io/the-cost-of-modern-webdev</link>
+			<guid isPermaLink="false">https://abgeschiedenheit.github.io/the-cost-of-modern-webdev</guid>
 			<pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
 		</item>
 		<item>
@@ -129,8 +129,8 @@
 &lt;p&gt;&lt;code&gt;e.&lt;/code&gt; follows the instructions of seperation, that the &lt;code&gt;e&lt;/code&gt; beginning character must be seperated from the &lt;code&gt;e&lt;/code&gt; ending character. This is logical. Using the &lt;code&gt;node&lt;/code&gt; REPL, &lt;code&gt;&amp;#47;e.&amp;#47;.test(&amp;#39;e&amp;#39;)&lt;/code&gt; turns out to be &lt;code&gt;false&lt;/code&gt;. The wildcard metacharacter is indicating another character must follow the character &lt;code&gt;e&lt;/code&gt; for there to be a match.&lt;/p&gt;
 &lt;p&gt;The following asterisk operator in &lt;code&gt;e.*&lt;/code&gt; requires similar thinking. For instance, why doesn&amp;#8217;t &lt;code&gt;e.+&lt;/code&gt; suffice? Why does &lt;code&gt;&amp;#47;e.+e&amp;#47;.test(&amp;#39;ee&amp;#39;)&lt;/code&gt; evaluate to &lt;code&gt;false&lt;/code&gt;? On the other hand, why does &lt;code&gt;&amp;#47;e.*e&amp;#47;.test(&amp;#39;ee&amp;#39;)&lt;/code&gt; evaluate to &lt;code&gt;true&lt;/code&gt;? Well, the former requires at least one instance of seperation between &lt;code&gt;ee&lt;/code&gt; to occur whereas the latter allows for zero instances of seperation between &lt;code&gt;ee&lt;/code&gt; to occur. &lt;/p&gt;
 &lt;p&gt;Above all, I&amp;#8217;m looking forward to getting deeper into regex. They might be handy in some particular cases. I&amp;#8217;m here instinctively thinking of using regex to mask my e-mail if it&amp;#8217;s listed on a public website. Who knows? While fun to work through, I&amp;#8217;m able to foresee regular expressions becoming exceedingly complex.&lt;/p&gt;</description>
-			<link>https://barf.btxx.org/introductory-regex-problem</link>
-			<guid isPermaLink="false">https://barf.btxx.org/introductory-regex-problem</guid>
+			<link>https://abgeschiedenheit.github.io/introductory-regex-problem</link>
+			<guid isPermaLink="false">https://abgeschiedenheit.github.io/introductory-regex-problem</guid>
 			<pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
 		</item>
 		<item>
@@ -138,8 +138,8 @@
 			<description>&lt;h1 id=&quot;interaction-heavy-information-weak&quot;&gt;interaction-heavy, information-weak&lt;/h1&gt;
 &lt;p&gt;2023-12-11&lt;/p&gt;
 &lt;p&gt;What makes accessibility difficult is the thin-line it operates in so as not to fall under this all too common software curse of being interaction-heavy but information-weak. The high degree of criticality in accessibility often means the user&amp;#8217;s intention lies outside interactivity. As for the rest, interaction must be enjoyable and educational lest our design fails in the domain of information software.&lt;/p&gt;</description>
-			<link>https://barf.btxx.org/interaction-heavy-information-weak</link>
-			<guid isPermaLink="false">https://barf.btxx.org/interaction-heavy-information-weak</guid>
+			<link>https://abgeschiedenheit.github.io/interaction-heavy-information-weak</link>
+			<guid isPermaLink="false">https://abgeschiedenheit.github.io/interaction-heavy-information-weak</guid>
 			<pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
 		</item>
 		<item>
@@ -160,8 +160,8 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Above all, shall we say: The safest general characterization of the typesetting system tradition is that it consists of a series of footnotes to TeX? For now, I&amp;#8217;m using Typst exclusively. Although, given how new it is, I wouldn&amp;#8217;t be surprised in significant shortcomings.&lt;/p&gt;</description>
-			<link>https://barf.btxx.org/from-latex-to-typst</link>
-			<guid isPermaLink="false">https://barf.btxx.org/from-latex-to-typst</guid>
+			<link>https://abgeschiedenheit.github.io/from-latex-to-typst</link>
+			<guid isPermaLink="false">https://abgeschiedenheit.github.io/from-latex-to-typst</guid>
 			<pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate>
 		</item>
 		<item>
@@ -223,8 +223,8 @@ img:after {
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The result for an image not found locally of the Milky Way Galaxy:&lt;/p&gt;</description>
-			<link>https://barf.btxx.org/accessible-images-after</link>
-			<guid isPermaLink="false">https://barf.btxx.org/accessible-images-after</guid>
+			<link>https://abgeschiedenheit.github.io/accessible-images-after</link>
+			<guid isPermaLink="false">https://abgeschiedenheit.github.io/accessible-images-after</guid>
 			<pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
 		</item>
 		<item>
@@ -261,8 +261,8 @@ img:after {
   content: &quot;\2197&quot;;
 }
 &lt;/code&gt;&lt;/pre&gt;</description>
-			<link>https://barf.btxx.org/accessible-hyperlinks-after</link>
-			<guid isPermaLink="false">https://barf.btxx.org/accessible-hyperlinks-after</guid>
+			<link>https://abgeschiedenheit.github.io/accessible-hyperlinks-after</link>
+			<guid isPermaLink="false">https://abgeschiedenheit.github.io/accessible-hyperlinks-after</guid>
 			<pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
 		</item>
 		<item>
@@ -284,8 +284,8 @@ img:after {
   outline: 1px solid;
 }
 &lt;/code&gt;&lt;/pre&gt;</description>
-			<link>https://barf.btxx.org/accessible-hyperlinks-active</link>
-			<guid isPermaLink="false">https://barf.btxx.org/accessible-hyperlinks-active</guid>
+			<link>https://abgeschiedenheit.github.io/accessible-hyperlinks-active</link>
+			<guid isPermaLink="false">https://abgeschiedenheit.github.io/accessible-hyperlinks-active</guid>
 			<pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
 		</item>
 </channel>

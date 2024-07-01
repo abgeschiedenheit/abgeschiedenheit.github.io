@@ -1,6 +1,6 @@
 #!/bin/sh
 
-domain="https://barf.btxx.org"
+domain="https://abgeschiedenheit.github.io"
 
 # Check the operating system
 os_name=$(uname -s)

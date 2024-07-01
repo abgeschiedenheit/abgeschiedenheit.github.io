@@ -1,3 +1,1 @@
-# abgeschiedenheit.github.io
-
-www testimonia
+# personal website
