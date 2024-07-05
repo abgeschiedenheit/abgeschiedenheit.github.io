@@ -11,3 +11,4 @@
 2024-07-04T21:23:09-07:00	issue seems to be due to the double quotes within double quotes in the property value re: git commit -m 'status update'
 2024-07-04T21:35:57-07:00	forgot to add 'make build' to the property value
 2024-07-04T21:37:58-07:00	got it! now i can just 'twtxt tweet' on my home directory and it gets published to my site
+2024-07-04T21:38:33-07:00	it takes a couple seconds but it gets there
