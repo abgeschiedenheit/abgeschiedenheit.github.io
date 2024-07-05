@@ -5,3 +5,4 @@
 2024-07-04T20:48:24-07:00	that didn't work. the property value wasn't wrapped in quotes per the config docs - let's try again
 2024-07-04T20:49:00-07:00	that didn't work. the property value wasn't wrapped in quotes per the config docs - let's try again
 2024-07-04T20:55:58-07:00	testing manually
+2024-07-04T20:58:04-07:00	minor edit in path
