@@ -40,10 +40,11 @@
 body {
   background-color: #123400;
   color: #fdf5e6;
-  font-family: "mediaeval", serif;
-  line-height: 1.33;
+  max-width: 800px;
   margin: 0 auto;
-  max-width: 688px;
+  font-family: "mediaeval", serif;
+  word-spacing: 6px;
+  line-height: 1.33;
   padding: 1rem 2rem;
 }
 
@@ -70,15 +71,15 @@ a:active {
 }
 
 h1 {
-  font-size: 130%;
+  font-size: 150%;
 }
 
 h2 {
-  font-size: 115%;
+  font-size: 138%;
 }
 
 h3 {
-  font-size: 105%;
+  font-size: 130%;
 }
 
 img {
@@ -156,7 +157,7 @@ figcaption {
 }
 
 p > img {
-  width: 30%;
+  width: 24%;
 }
 
 small, span {
