@@ -12,3 +12,4 @@
 2024-07-04T21:35:57-07:00	forgot to add 'make build' to the property value
 2024-07-04T21:37:58-07:00	got it! now i can just 'twtxt tweet' on my home directory and it gets published to my site
 2024-07-04T21:38:33-07:00	it takes a couple seconds but it gets there
+2024-07-04T21:40:01-07:00	now i want the new logs on to be on top: i am changing the sorting to ascending - hopefully that works
