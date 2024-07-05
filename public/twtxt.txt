@@ -1,2 +1,6 @@
 2024-07-04T20:15:44-07:00	just setting up twtxt
 2024-07-04T20:20:35-07:00	can i use multiple commands for the post_tweet_hook, e.g., git add, commit, push
+2024-07-04T20:42:56-07:00	post_tweet_hook test re: last status update implementation
+2024-07-04T20:47:36-07:00	that didn't work. potential cause: the property value wasn't wrapped in quotes per the config docs. let's try again
+2024-07-04T20:48:24-07:00	that didn't work. the property value wasn't wrapped in quotes per the config docs - let's try again
+2024-07-04T20:49:00-07:00	that didn't work. the property value wasn't wrapped in quotes per the config docs - let's try again
