@@ -25,3 +25,4 @@
 2024-07-07T02:54:10-07:00	Hegel: Education is the art of making people ethical. It considers them as natural beings and shows them the way to a second birth, the way to change their original nature into a second, spiritual nature, and makes this spiritual level habitual to them.
 2024-07-07T22:10:18-07:00	I would like to organize my books folder containing ~4500 files \(~50GB\), mostly PDFs, with some EPUBs. I've tried writing a Python script to organize them by extracting the metadata from the PDFs but the metadata is either wrong or missing. I'm not suprised that is so. Most of the files come from Anna's Archive.
 2024-07-07T22:56:41-07:00	A library that will read the entire content of the PDF and extract the data I want doesn't sound optimal.
+2024-07-08T03:44:27-07:00	Just finished _Twin Peaks: Fire Walk with Me_. Quite good. Strange. I might have to watch the TV show one day.
