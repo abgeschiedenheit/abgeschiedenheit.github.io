@@ -32,3 +32,4 @@
 2024-07-09T04:59:08-07:00	Holderlin: Sometimes this genius goes dark and sinks down into the bitter well of his heart but mostly his apocalyptic star glitters wondrously.
 2024-07-09T18:28:35-07:00	There are countless of books I can't find on Anna's Archive. Today's? _Transparent God_ by Claude Esteban.
 2024-07-09T21:05:37-07:00	Wallace Stevens was right: The summer night _is_ like a perfection of thought. As Kobayashi Issa penned a hundred years or so before him.
+2024-07-09T21:48:05-07:00	Thinking about doing fast.ai's free course: Practical Deep Learning.
